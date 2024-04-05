@@ -1,0 +1,564 @@
+[
+    {
+        "id": 1,
+        "title": "Alimento perro adulto Champion Dog carne y pollo 15 Kg",
+        "description": "Champion Dog Adulto te ofrece un alimento 100% completo y balanceado, desarrollado especialmente para satisfacer todos sus requerimientos nutricionales; formulado con la mejor proteína, la albúmina de huevo, con un completo perfil de aminoácidos esenciales para que tu perro se desarrolle sano y feliz.",
+        "offerPrice": 23190,
+        "normalPrice": 30290,
+        "discountPercentage": 0.23,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Champion Dog",
+        "category": "Alimento Perro Adulto",
+        "thumbnail": "1large.jpg",
+        "images": [
+            "1large.jpg"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Alimento perro adulto Cannes sabor carne y cereales 15 Kg",
+        "description": "Alimento perro adulto CANNES® sabor Carne y Cereales es una comida completa y balanceada con ingredientes seleccionados de alta calidad, enriquecidos con vitaminas y minerales, que le brindan tu mascota una vida saludable. Formato 15 kg. Alimenta a tu mascota con tranquilidad, calidad certificada por DICTUC.",
+        "offerPrice": 19145,
+        "normalPrice": 27350,
+        "discountPercentage": 0.30,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Cannes",
+        "category": "Alimento Perro Adulto",
+        "thumbnail": "2large.jpg",
+        "images": [
+            "2large.jpg"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Alimento perro adulto Master Dog carne 15 Kg",
+        "description": "Alimento completo y balanceado recomendado para perros adultos de todos los tamaños y razas. Contiene Omega Full para mantener una piel sana que se refleja en un pelaje brillante.",
+        "offerPrice": 26990,
+        "normalPrice": 29990,
+        "discountPercentage": 0.10,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Masterdog",
+        "category": "Alimento Perro Adulto",
+        "thumbnail": "3large.jpg",
+        "images": [
+            "3large.jpg"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Alimento perro adulto Pedigree pollo y cereales 15 Kg",
+        "description": "Esta es la etapa de vida más larga de tu perro, por lo que necesita estar sano y fuerte para disfrutar cada momento. Además su sistema digestivo ya ha madurado, por eso necesita de una correcta alimentación. Dale Pedigree® Adulto con proteína para mantener sus músculos fuertes y fibras para una óptima digestión.",
+        "offerPrice": 26880,
+        "normalPrice": 38750,
+        "discountPercentage": 0.31,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Pedigree",
+        "category": "Alimento Perro Adulto",
+        "thumbnail": "4large.jpg",
+        "images": [
+            "4large.jpg"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Alimento perro adulto Purina One minis y pequeños pollo y carne 2 Kg",
+        "description": "Alimento perro adulto minis y pequeño sabor pollo y carne.",
+        "offerPrice": 8220,
+        "normalPrice": 13690,
+        "discountPercentage": 0.40,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Purina One",
+        "category": "Alimento Perro Adulto",
+        "thumbnail": "5large.jpg",
+        "images": [
+            "5large.jpg"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Alimento perro adulto Purina One minis y pequeños pollo y cordero 2 Kg",
+        "description": "Alimento perro adulto minis y pequeño sabor pollo y cordero.",
+        "offerPrice": 8390,
+        "normalPrice": 13990,
+        "discountPercentage": 0.40,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Purina One",
+        "category": "Alimento Perro Adulto",
+        "thumbnail": "6large.jpg",
+        "images": [
+            "6large.jpg",
+            "6.1large.jpg",
+            "6.2large.jpg"
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Alimento perro adulto Dog Chow minis y pequeños carne y pollo 8 Kg",
+        "description": "Su pequeño cuerpo ya creció y le fascina estar activo con tu familia. Formulado con los nutrientes e ingredientes de calidad que lo a yudarán a tener salud y vitalidad por muchos más años.",
+        "offerPrice": 21990,
+        "normalPrice": 31350,
+        "discountPercentage": 0.30,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Dog Chow",
+        "category": "Alimento Perro Adulto",
+        "thumbnail": "7large.jpg",
+        "images": [
+            "7large.jpg",
+            "7.1large.jpg",
+            "7.2large.jpg"
+        ]
+    },
+    {
+        "id": 8,
+        "title": "Alimento perro adulto Cannes sabor carne y cereales 3 Kg",
+        "description": "Alimento perro adulto CANNES® sabor Carne y Cereales es una comida completa y balanceada con ingredientes seleccionados de alta calidad, enriquecidos con vitaminas y minerales, que le brindan tu mascota una vida saludable. Formato 3 kg. Alimenta a tu mascota con tranquilidad, calidad certificada por DICTUC.",
+        "offerPrice": 7118,
+        "normalPrice": 10950,
+        "discountPercentage": 0.35,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Cannes",
+        "category": "Alimento Perro Adulto",
+        "thumbnail": "8large.jpg",
+        "images": [
+            "8large.jpg"
+        ]
+    },
+    {
+        "id": 9,
+        "title": "Alimento perro adulto Champion Dog razas pequeñas carne pollo y vegetales 3 Kg",
+        "description": "Champion Dog te ofrece un alimento 100% completo y balanceado, desarrollado especialmente para satisfacer todos sus requerimientos nutricionales; con croquetas más pequeñas y una formula con mas energía y proteinas; ideal para perros pequeños con metabolizmo acelerado.",
+        "offerPrice": 7990,
+        "normalPrice": 10550,
+        "discountPercentage": 0.24,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Champion Dog",
+        "category": "Alimento Perro Adulto",
+        "thumbnail": "9large.jpg",
+        "images": [
+            "9large.jpg"
+        ]
+    },
+    {
+        "id": 10,
+        "title": "Alimento perro adulto Dog Chow medianos y grandes carne y pollo 15 Kg",
+        "description": "Perros adultos de 1 a 7 años. Nivel adecuado de proteínas, grasas y otros nutrientes para prevenir la obesidad y mantener las articulaciones sanas en perros de razas medianas y grandes.",
+        "offerPrice": 0,
+        "normalPrice": 42390,
+        "discountPercentage": 0,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Dog Chow",
+        "category": "Alimento Perro Adulto",
+        "thumbnail": "10large.jpg",
+        "images": [
+            "10large.jpg",
+            "10.1large.jpg"
+        ]
+    },
+    {
+        "id": 11,
+        "title": "Alimento perro cachorro Pedigree etapa 1 sano crecimiento 15 Kg",
+        "description": "Alimento perro cachorro Pedigree etapa 1 sano crecimiento, 15 Kg",
+        "offerPrice": 29790,
+        "normalPrice": 42550,
+        "discountPercentage": 0.30,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Pedigree",
+        "category": "Alimento Cachorro",
+        "thumbnail": "11large.jpg",
+        "images": [
+            "11large.jpg"
+        ]
+    },
+    {
+        "id": 12,
+        "title": "Alimento perro cachorro Master Dog carne y leche 15 Kg",
+        "description": "Alimento perro cachorro Master Dog carne y leche, 15 Kg",
+        "offerPrice": 26990,
+        "normalPrice": 29990,
+        "discountPercentage": 0.10,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Masterdog",
+        "category": "Alimento Cachorro",
+        "thumbnail": "12large.jpg",
+        "images": [
+            "12large.jpg"
+        ]
+    },
+    {
+        "id": 13,
+        "title": "Alimento perro cachorro Champion Dog razas minis y pequeños 3 Kg",
+        "description": "Champion Dog Cachorro te ofrece un alimento 100% completo y balanceado, desarrollado especialmente para satisfacer todos sus requerimientos nutricionales; con croquetas más pequeñas y una formula con mas energía y proteinas; enriquecido con Calcio para desarrollar huesos y dientes fuertes; y DHA para el desarrollo del cerebro y sistema nervioso.",
+        "offerPrice": 7990,
+        "normalPrice": 10550,
+        "discountPercentage": 0.24,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Champion Dog",
+        "category": "Alimento Cachorro",
+        "thumbnail": "13large.jpg",
+        "images": [
+            "13large.jpg"
+        ]
+    },
+    {
+        "id": 14,
+        "title": "Alimento perro cachorro Dog Chow razas pequeñas carne y pollo 3 Kg",
+        "description": "Formulado con los nutrientes e ingredientes de calidad que su cuerpo necesita para crecer sano y fuerte. Con Dha, que ayuda al desarrollo del cerebro y la visión y 23 vitaminas y minerales: Una nutrición 100% completa y balanceada.",
+        "offerPrice": 0,
+        "normalPrice": 14090,
+        "discountPercentage": 0,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Dog Chow",
+        "category": "Alimento Cachorro",
+        "thumbnail": "14large.jpg",
+        "images": [
+            "14large.jpg",
+            "14.1large.jpg",
+            "14.2large.jpg"
+        ]
+    },
+    {
+        "id": 15,
+        "title": "Alimento perro cachorro Dog Chow razas medianas y grandes carne y pollo 3 Kg",
+        "description": "Formulado con los nutrientes e ingredientes de calidad que su cuerpo necesita para crecer sano y fuerte. Con Dha, que ayuda al desarrollo del cerebro y la visión y 23 vitaminas y minerales: Una Nutrición 100% completa y balanceada.",
+        "offerPrice": 0,
+        "normalPrice": 14.090,
+        "discountPercentage": 0,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Dog Chow",
+        "category": "Alimento Cachorro",
+        "thumbnail": "15large.jpg",
+        "images": [
+            "14large.jpg",
+            "15.1large.jpg",
+            "15.2large.jpg"
+        ]
+    },
+    {
+        "id": 16,
+        "title": "Alimento perro cachorro Cannes sabor carne y leche 3 Kg",
+        "description": "Alimento perro cachorro CANNES® sabor Carne y Leche es una comida completa y balanceada con ingredientes seleccionados de alta calidad, enriquecidos con vitaminas y minerales, que le brindan tu mascota una vida saludable. Con nutrientes y ácidos grasos esenciales para el desarrollo óptimo de tu cachorro. Formato 3 kg. Alimenta a tu mascota con tranquilidad, calidad certificada por DICTUC.",
+        "offerPrice": 9990,
+        "normalPrice": 11990,
+        "discountPercentage": 0.17,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Cannes",
+        "category": "Alimento Cachorro",
+        "thumbnail": "16large.jpg",
+        "images": [
+            "16large.jpg"
+        ]
+    },
+    {
+        "id": 17,
+        "title": "Alimento perro cachorro Champion Dog 3 Kg",
+        "description": "Champion Dog Cachorro te ofrece un alimento 100% completo y balanceado, desarrollado especialmente para satisfacer todos sus requerimientos nutricionales; enriquecido con Calcio para desarrollar huesos y dientes fuertes; y DHA para el desarrollo del cerebro y sistema nervioso.",
+        "offerPrice": 8990,
+        "normalPrice": 10550,
+        "discountPercentage": 0.15,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Champion Dog",
+        "category": "Alimento Cachorro",
+        "thumbnail": "17large.jpg",
+        "images": [
+            "17large.jpg"
+        ]
+    },
+    {
+        "id": 18,
+        "title": "Alimento perro cachorro Animal Planet razas pequeñas 2.5 Kg",
+        "description": "Para cachorros de razas pequeñas desde el mes y medio hasta los 12 meses. Óptimo desarrollo cerebral, crecimiento y desarrollo. Fortalece el sistema inmune.",
+        "offerPrice": 14390,
+        "normalPrice": 16390,
+        "discountPercentage": 0.12,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Animal Planet",
+        "category": "Alimento Cachorro",
+        "thumbnail": "18large.jpg",
+        "images": [
+            "18large.jpg"
+        ]
+    },
+    {
+        "id": 19,
+        "title": "Alimento perro cachorro Dog Chow razas medianas y grandes carne y pollo 15 Kg",
+        "description": "Cachorro de 3 a 15 meses. Mejor nutrición y un nivel óptimo de energía para mantener una curva de crecimiento adecuada promoviendoe, l sano desarrollo de las articulaciones de los cachorros de razas medianas y grandes.",
+        "offerPrice": 0,
+        "normalPrice": 45750,
+        "discountPercentage": 0,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Dog Chow",
+        "category": "Alimento Cachorro",
+        "thumbnail": "19large.jpg",
+        "images": [
+            "19large.jpg",
+            "19.1large.jpg",
+            "19.2large.jpg"
+        ]
+    },
+    {
+        "id": 20,
+        "title": "Alimento perro cachorro Master Dog carne y leche 3 Kg",
+        "description": "Porque tu cachorro necesita el mejor alimento desde sus inicios, el nuevo Master Dog trae más proteínas para un mejor desarrollo muscular y más materia grasa para entregarle toda la energía necesaria en sus juegos.",
+        "offerPrice": 0,
+        "normalPrice": 11690,
+        "discountPercentage": 0,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Masterdog",
+        "category": "Alimento Cachorro",
+        "thumbnail": "20large.jpg",
+        "images": [
+            "20large.jpg"
+        ]
+    },
+    {
+        "id": 21,
+        "title": "Alimento gato Cat Chow adultos pescado 3 Kg",
+        "description": "Alimento gato Cat Chow adultos pescado, 3 Kg",
+        "offerPrice": 9850,
+        "normalPrice": 16990,
+        "discountPercentage": 0.42,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Cat Chow",
+        "category": "Alimento Gato Adulto",
+        "thumbnail": "21large.jpg",
+        "images": [
+            "21large.jpg",
+            "21.1large.jpg"
+        ]
+    },
+    {
+        "id": 22,
+        "title": "Alimento gatos adulto Whiskas sabor carne bolsa 8 Kg",
+        "description": "La nueva receta de Whiskas Alimento Seco combina la nutrición que tu gato necesita, con el sabor que ama. Desarrollado nutricionalmente con veterinarios para ayudarlo a mantenerse saludable y ronroneando durante toda la vida. Y ahora, con prebióticos que ayudan a una buena digestión.",
+        "offerPrice": 21203,
+        "normalPrice": 29050,
+        "discountPercentage": 0.27,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Whiskas",
+        "category": "Alimento Gato Adulto",
+        "thumbnail": "22large.jpg",
+        "images": [
+            "22large.jpg"
+        ]
+    },
+    {
+        "id": 23,
+        "title": "Alimento para gato Cat Chow adulto delimix 8 Kg",
+        "description": "Alimento para gato Cat Chow adulto delimix, 8 Kg",
+        "offerPrice": 21990,
+        "normalPrice": 32050,
+        "discountPercentage": 0.31,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Cat Chow",
+        "category": "Alimento Gato Adulto",
+        "thumbnail": "23large.jpg",
+        "images": [
+            "23large.jpg",
+            "23.1large.jpg"
+        ]
+    },
+    {
+        "id": 24,
+        "title": "Alimento gato adulto Purina One esterilizado pollo y salmón 2 Kg",
+        "description": "Alimento gato esterilizado sabor pollo y salmón.",
+        "offerPrice": 11990,
+        "normalPrice": 19890,
+        "discountPercentage": 0.40,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Purina One",
+        "category": "Alimento Gato Adulto",
+        "thumbnail": "24large.jpg",
+        "images": [
+            "24large.jpg",
+            "24.1large.jpg",
+            "24.2large.jpg"
+        ]
+    },
+    {
+        "id": 25,
+        "title": "Alimento gato adulto Purina One pollo salmón 2 Kg",
+        "description": "Alimento gato adulto sabor pollo salmón.",
+        "offerPrice": 11990,
+        "normalPrice": 19890,
+        "discountPercentage": 0.40,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Purina One",
+        "category": "Alimento Gato Adulto",
+        "thumbnail": "25large.jpg",
+        "images": [
+            "25large.jpg",
+            "25.1large.jpg",
+            "25.2large.jpg"
+        ]
+    },
+    {
+        "id": 26,
+        "title": "Alimento gato adulto Whiskas carne 3 Kg",
+        "description": "Contiene gran variedad de sabores de excelente palatabilidad, esencial para el sensible paladar de los gatos. Su formulación estimula la ingesta de agua manteniendo un adecuado PH urinario. Contiene Taurina para mejorar la visión y el corazón. Tiene Omega 6 que mantiene la piel y el pelaje más saludable y brillante.",
+        "offerPrice": 10210,
+        "normalPrice": 14590,
+        "discountPercentage": 0.30,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Whiskas",
+        "category": "Alimento Gato Adulto",
+        "thumbnail": "26large.jpg",
+        "images": [
+            "26large.jpg"
+        ]
+    },
+    {
+        "id": 27,
+        "title": "Alimento gato adulto Whiskas pescado 1 Kg",
+        "description": "Contiene Taurina para mejorar la visión y el corazón. Tiene Omega 6 que mantiene la piel y el pelaje más saludable y brillante. Incorpora pulpa de remolacha que ayuda a mantener el intestino más saludable. Incluye calcio para el desarrollo de dientes y huesos sanos y que aportan a su sano crecimiento. Su delicioso sabor carne y leche está fortificado con minerales esenciales como hierro y zinc.",
+        "offerPrice": 4473,
+        "normalPrice": 6390,
+        "discountPercentage": 0.30,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Whiskas",
+        "category": "Alimento Gato Adulto",
+        "thumbnail": "27large.jpg",
+        "images": [
+            "27large.jpg"
+        ]
+    },
+    {
+        "id": 28,
+        "title": "Alimento gatos castrados Whiskas sabor mix de carnes bolsa 3 Kg",
+        "description": "Alimento gatos castrados Whiskas sabor mix de carnes bolsa 3 Kg",
+        "offerPrice": 11610,
+        "normalPrice": 16590,
+        "discountPercentage": 0.30,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Whiskas",
+        "category": "Alimento Gato Adulto",
+        "thumbnail": "28large.jpg",
+        "images": [
+            "28large.jpg"
+        ]
+    },
+    {
+        "id": 29,
+        "title": "Alimento gato adulto Whiskas carne 1 Kg",
+        "description": "Contiene gran variedad de sabores de excelente palatabilidad, esencial para el sensible paladar de los gatos. Su formulación estimula la ingesta de agua manteniendo un adecuado PH urinario. Contiene Taurina para mejorar la visión y el corazón. Tiene Omega 6 que mantiene la piel y el pelaje más saludable y brillante.",
+        "offerPrice": 4473,
+        "normalPrice": 6390,
+        "discountPercentage": 0.30,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Whiskas",
+        "category": "Alimento Gato Adulto",
+        "thumbnail": "29large.jpg",
+        "images": [
+            "29large.jpg"
+        ]
+    },
+    {
+        "id": 30,
+        "title": "Alimento gato adulto Whiskas pescado bolsa 3 Kg",
+        "description": "Alimento gato adulto Whiskas pescado bolsa 3 Kg",
+        "offerPrice": 10210,
+        "normalPrice": 14590,
+        "discountPercentage": 0.30,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Whiskas",
+        "category": "Alimento Gato Adulto",
+        "thumbnail": "30large.jpg",
+        "images": [
+            "30large.jpg"
+        ]
+    },
+    {
+        "id": 31,
+        "title": "Alimento gatitos Cat Chow carne y leche 3 Kg",
+        "description": "",
+        "offerPrice": 12250,
+        "normalPrice": 18350,
+        "discountPercentage": 0.33,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Cat Chow",
+        "category": "Alimento Gatito",
+        "thumbnail": "31large.jpg",
+        "images": [
+            "31large.jpg"
+        ]
+    },
+    {
+        "id": 32,
+        "title": "Alimento gatitos Whiskas carne y leche 1 Kg",
+        "description": "Contiene Taurina para mejorar la visión y el corazón. Tiene Omega 6 que mantiene la piel y el pelaje más saludable y brillante. Incorpora pulpa de remolacha que ayuda a mantener el intestino más saludable. Incluye calcio para el desarrollo de dientes y huesos sanos y que aportan a su sano crecimiento. Su delicioso sabor carne y leche está fortificado con minerales esenciales como hierro y zinc.",
+        "offerPrice": 4473,
+        "normalPrice": 6390,
+        "discountPercentage": 0.30,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Whiskas",
+        "category": "Alimento Gatito",
+        "thumbnail": "32large.jpg",
+        "images": [
+            "32large.jpg"
+        ]
+    },
+    {
+        "id": 33,
+        "title": "Alimento gatitos Cat Chow carne y leche 1 Kg",
+        "description": "El nuevo Purina Cat Chow Gatitos de 1 a 12 meses, ofrece los nutrientes que tu gatito necesita para un crecimiento sano durante su primer año de vida. Contiene DHA que ayuda a desarrollar su cerebro.",
+        "offerPrice": 0,
+        "normalPrice": 6590,
+        "discountPercentage": 0,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Cat Chow",
+        "category": "Alimento Gatito",
+        "thumbnail": "33large.jpg",
+        "images": [
+            "33large.jpg",
+            "33.1large.jpg"
+        ]
+    },
+    {
+        "id": 34,
+        "title": "Alimento gatitos Champion Cat pollo y leche 1 Kg",
+        "description": "Champion Cat Gatitos es un alimento 100% completo y balanceado, especialmente formulado para Gatitos de 1 a 12 meses, con todos los nutrientes necesarios para un sano crecimiento y adecuado desarrollo durante su primer año de vida. Contiene DHA para el desarrollo cerebral y buen funcionamiento del sistema nervioso de tu gatito. Admás, enriquecido con Omega y antioxidantes, para mantener saludable su piel y pelaje.",
+        "offerPrice": 4550,
+        "normalPrice": 5090,
+        "discountPercentage": 0.11,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Champion Cat",
+        "category": "Alimento Gatito",
+        "thumbnail": "34large.jpg",
+        "images": [
+            "34large.jpg"
+        ]
+    }
+]
