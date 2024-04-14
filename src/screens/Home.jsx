@@ -3,14 +3,19 @@ import { colors } from '../constants/colors'
 import CategoryItem from '../components/CategoryItem'
 import categories from '../data/categories.json'
 
-const Home = () => {
+const Home = ({ setCategorySelected }) => {
     return (
         <View style={styles.flatListContainer}>
             <FlatList
                 showsVerticalScrollIndicator={false}
                 keyExtractor={category => category}
                 data={categories.sort()}
-                renderItem={({ item }) => <CategoryItem category={item} />}
+                renderItem={({ item }) => (
+                    <CategoryItem
+                        selectCategory={setCategorySelected}
+                        category={item}
+                    />
+                )}
             />
         </View>
     )
@@ -24,8 +29,8 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
         flexDirection: 'column',
-        justifyContent:'center',
-        alignItems:'center',
+        justifyContent: 'center',
+        alignItems: 'center',
         gap: 10
     }
 })
