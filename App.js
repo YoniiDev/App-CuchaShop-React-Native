@@ -10,7 +10,7 @@ import { useCallback, useState } from 'react';
 const App = () => {
 
   const [categorySelected, setCategorySelected] = useState("")
-  
+
   return (
     <View style={styles.container}>
       <Header title={"CuchaShop"} />

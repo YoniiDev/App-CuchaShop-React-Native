@@ -4,7 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { colors } from '../constants/colors'
 import products from '../data/products.json'
 import ProductItem from '../components/ProductItem'
-import Search from '../components/Search'
+import SearchProduct from '../components/SearchProduct'
 
 const ItemListCategory = ({ categorySelected = "", setCategorySelected = () => { } }) => {
   const [keyWord, setKeyword] = useState("")
@@ -30,7 +30,7 @@ const ItemListCategory = ({ categorySelected = "", setCategorySelected = () => {
 
   return (
     <View style={styles.flatListContainer}>
-      <Search error={error} onSearch={setKeyword} goBack={() => setCategorySelected("")} />
+      <SearchProduct error={error} onSearch={setKeyword} goBack={() => setCategorySelected("")} />
       <FlatList
         data={productsFiltered}
         renderItem={({ item }) => <ProductItem product={item} />}

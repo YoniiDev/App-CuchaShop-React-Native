@@ -33,6 +33,6 @@ const styles = StyleSheet.create({
     margin: 10
   },
   textCategory: {
-    color: 'black'
+    color: 'white'
   }
 })
