@@ -29,13 +29,17 @@ const ItemListCategory = ({ categorySelected = "", setCategorySelected = () => {
   }, [keyWord, categorySelected])
 
   return (
-    <View style={styles.flatListContainer}>
+    <View style={styles.flatListAndSearchContainer}>
       <SearchProduct error={error} onSearch={setKeyword} goBack={() => setCategorySelected("")} />
-      <FlatList
-        data={productsFiltered}
-        renderItem={({ item }) => <ProductItem product={item} />}
-        keyExtractor={(producto) => producto.id}
-      />
+      <View style={styles.flatListContainer}>
+        <FlatList
+          style={styles.flatList}
+          data={productsFiltered}
+          renderItem={({ item }) => <ProductItem product={item} />}
+          keyExtractor={(producto) => producto.id}
+          numColumns={2}
+        />
+      </View>
     </View>
   )
 }
@@ -43,13 +47,24 @@ const ItemListCategory = ({ categorySelected = "", setCategorySelected = () => {
 export default ItemListCategory
 
 const styles = StyleSheet.create({
-  flatListContainer: {
+  flatListAndSearchContainer: {
     width: '100%',
     backgroundColor: colors.green2,
     flex: 1,
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: 10
+    paddingTop: 10
+  },
+
+  flatListContainer: {
+    backgroundColor: 'black',
+    width: '100%',
+    flex: 1,
+    flexDirection: 'column',
+    flexWrap: 'wrap'
+  },
+  flatList: {
+    
   }
 })

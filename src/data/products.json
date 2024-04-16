@@ -10,9 +10,9 @@
         "stock": 100,
         "brand": "Champion Dog",
         "category": "Alimento Perro Adulto",
-        "thumbnail": "1large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/1large.jpg?alt=media&token=21e34c34-692c-4d10-a243-e2a352f2a915",
         "images": [
-            "1large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/1large.jpg?alt=media&token=21e34c34-692c-4d10-a243-e2a352f2a915"
         ]
     },
     {
@@ -26,9 +26,9 @@
         "stock": 100,
         "brand": "Cannes",
         "category": "Alimento Perro Adulto",
-        "thumbnail": "2large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/2large.jpg?alt=media&token=a3574157-afd1-4a2e-8756-9232319f75ba",
         "images": [
-            "2large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/2large.jpg?alt=media&token=a3574157-afd1-4a2e-8756-9232319f75ba"
         ]
     },
     {
@@ -42,9 +42,9 @@
         "stock": 100,
         "brand": "Masterdog",
         "category": "Alimento Perro Adulto",
-        "thumbnail": "3large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/3large.jpg?alt=media&token=0ab322d3-a113-4806-ba66-7a0b895a17a3",
         "images": [
-            "3large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/3large.jpg?alt=media&token=0ab322d3-a113-4806-ba66-7a0b895a17a3"
         ]
     },
     {
@@ -58,9 +58,9 @@
         "stock": 100,
         "brand": "Pedigree",
         "category": "Alimento Perro Adulto",
-        "thumbnail": "4large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/4large.jpg?alt=media&token=b662803f-3cf7-40c6-bdd5-aae853ea14e0",
         "images": [
-            "4large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/4large.jpg?alt=media&token=b662803f-3cf7-40c6-bdd5-aae853ea14e0"
         ]
     },
     {
@@ -74,9 +74,9 @@
         "stock": 100,
         "brand": "Purina One",
         "category": "Alimento Perro Adulto",
-        "thumbnail": "5large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/5large.jpg?alt=media&token=3eeb8bc3-8b06-44fc-9aa5-e72e1bc0aa60",
         "images": [
-            "5large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/5large.jpg?alt=media&token=3eeb8bc3-8b06-44fc-9aa5-e72e1bc0aa60"
         ]
     },
     {
@@ -90,11 +90,11 @@
         "stock": 100,
         "brand": "Purina One",
         "category": "Alimento Perro Adulto",
-        "thumbnail": "6large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/6large.jpg?alt=media&token=d2219e50-e5e6-4834-bae6-5f55428dcf3d",
         "images": [
-            "6large.jpg",
-            "6.1large.jpg",
-            "6.2large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/6large.jpg?alt=media&token=d2219e50-e5e6-4834-bae6-5f55428dcf3d",
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/6.1large.jpg?alt=media&token=94fb5ea2-d2ca-4e96-b3d0-a36731bbbbb7",
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/6.2large.jpg?alt=media&token=b6f33e3b-3e34-4c54-9063-9999c982ab51"
         ]
     },
     {
@@ -108,11 +108,11 @@
         "stock": 100,
         "brand": "Dog Chow",
         "category": "Alimento Perro Adulto",
-        "thumbnail": "7large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/7large.jpg?alt=media&token=879056d0-ee6d-44be-ac7e-05c1f5d31694",
         "images": [
-            "7large.jpg",
-            "7.1large.jpg",
-            "7.2large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/7large.jpg?alt=media&token=879056d0-ee6d-44be-ac7e-05c1f5d31694",
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/7.1large.jpg?alt=media&token=637bda7d-9591-4a0c-900f-452fee1310c5",
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/7.2large.jpg?alt=media&token=55111074-885c-4b33-a059-0e3551eacfb5"
         ]
     },
     {
@@ -126,9 +126,9 @@
         "stock": 100,
         "brand": "Cannes",
         "category": "Alimento Perro Adulto",
-        "thumbnail": "8large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/8large.jpg?alt=media&token=b536f601-19f5-4f18-9ad4-61fe236f38fe",
         "images": [
-            "8large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/8large.jpg?alt=media&token=b536f601-19f5-4f18-9ad4-61fe236f38fe"
         ]
     },
     {
@@ -142,9 +142,9 @@
         "stock": 100,
         "brand": "Champion Dog",
         "category": "Alimento Perro Adulto",
-        "thumbnail": "9large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/9large.jpg?alt=media&token=8ecae532-099f-4b63-a7be-930fc75f8c95",
         "images": [
-            "9large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/9large.jpg?alt=media&token=8ecae532-099f-4b63-a7be-930fc75f8c95"
         ]
     },
     {
@@ -158,10 +158,10 @@
         "stock": 100,
         "brand": "Dog Chow",
         "category": "Alimento Perro Adulto",
-        "thumbnail": "10large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/10large.jpg?alt=media&token=3f068cf9-cd8f-46a7-811b-610bda02735b",
         "images": [
-            "10large.jpg",
-            "10.1large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/10large.jpg?alt=media&token=3f068cf9-cd8f-46a7-811b-610bda02735b",
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/10.1large.jpg?alt=media&token=ee753866-6375-4d5d-ac07-870604693f59"
         ]
     },
     {
@@ -175,9 +175,9 @@
         "stock": 100,
         "brand": "Pedigree",
         "category": "Alimento Cachorro",
-        "thumbnail": "11large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/11large.jpg?alt=media&token=70dc341d-d4cd-4ae2-bb1f-e30e2c377c43",
         "images": [
-            "11large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/11large.jpg?alt=media&token=70dc341d-d4cd-4ae2-bb1f-e30e2c377c43"
         ]
     },
     {
@@ -191,9 +191,9 @@
         "stock": 100,
         "brand": "Masterdog",
         "category": "Alimento Cachorro",
-        "thumbnail": "12large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/12large.jpg?alt=media&token=30e44c59-35c7-4c70-ba5d-502cc0c1b233",
         "images": [
-            "12large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/12large.jpg?alt=media&token=30e44c59-35c7-4c70-ba5d-502cc0c1b233"
         ]
     },
     {
@@ -207,9 +207,9 @@
         "stock": 100,
         "brand": "Champion Dog",
         "category": "Alimento Cachorro",
-        "thumbnail": "13large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/13large.jpg?alt=media&token=79e2af11-342f-43fb-b66a-c9721ebd3fb0",
         "images": [
-            "13large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/13large.jpg?alt=media&token=79e2af11-342f-43fb-b66a-c9721ebd3fb0"
         ]
     },
     {
@@ -223,11 +223,11 @@
         "stock": 100,
         "brand": "Dog Chow",
         "category": "Alimento Cachorro",
-        "thumbnail": "14large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/14large.jpg?alt=media&token=9eb35a19-1e16-42db-b5a3-22b291790c9f",
         "images": [
-            "14large.jpg",
-            "14.1large.jpg",
-            "14.2large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/14large.jpg?alt=media&token=9eb35a19-1e16-42db-b5a3-22b291790c9f",
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/14.1large.jpg?alt=media&token=731b7a48-34a0-4184-88fc-4d6b7ebfe3ed",
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/14.2large.jpg?alt=media&token=d63d65d9-7d09-4c33-9b80-9506b164a94c"
         ]
     },
     {
@@ -241,11 +241,11 @@
         "stock": 100,
         "brand": "Dog Chow",
         "category": "Alimento Cachorro",
-        "thumbnail": "15large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/15large.jpg?alt=media&token=4577b90d-fb18-4118-9fc2-9b3248fd86af",
         "images": [
-            "14large.jpg",
-            "15.1large.jpg",
-            "15.2large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/15large.jpg?alt=media&token=4577b90d-fb18-4118-9fc2-9b3248fd86af",
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/15.1large.jpg?alt=media&token=f0d52275-2ddf-446f-9a66-a4c5209b2a5b",
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/15.2large.jpg?alt=media&token=4ced3ae0-810b-4bdf-a2c4-52ab3839683c"
         ]
     },
     {
@@ -259,9 +259,9 @@
         "stock": 100,
         "brand": "Cannes",
         "category": "Alimento Cachorro",
-        "thumbnail": "16large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/16large.jpg?alt=media&token=757fab4e-a9e1-4ca5-b1d9-53c09c8febf3",
         "images": [
-            "16large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/16large.jpg?alt=media&token=757fab4e-a9e1-4ca5-b1d9-53c09c8febf3"
         ]
     },
     {
@@ -275,9 +275,9 @@
         "stock": 100,
         "brand": "Champion Dog",
         "category": "Alimento Cachorro",
-        "thumbnail": "17large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/17large.jpg?alt=media&token=c44b0815-94fb-47ee-ad9f-7466b7823413",
         "images": [
-            "17large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/17large.jpg?alt=media&token=c44b0815-94fb-47ee-ad9f-7466b7823413"
         ]
     },
     {
@@ -291,9 +291,9 @@
         "stock": 100,
         "brand": "Animal Planet",
         "category": "Alimento Cachorro",
-        "thumbnail": "18large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/18large.jpg?alt=media&token=36e17287-4b5d-4d11-8329-8058571d27b3",
         "images": [
-            "18large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/18large.jpg?alt=media&token=36e17287-4b5d-4d11-8329-8058571d27b3"
         ]
     },
     {
@@ -307,11 +307,11 @@
         "stock": 100,
         "brand": "Dog Chow",
         "category": "Alimento Cachorro",
-        "thumbnail": "19large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/19large.jpg?alt=media&token=d41b3065-c12f-4939-9454-b271d8ef1669",
         "images": [
-            "19large.jpg",
-            "19.1large.jpg",
-            "19.2large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/19large.jpg?alt=media&token=d41b3065-c12f-4939-9454-b271d8ef1669",
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/19.1large.jpg?alt=media&token=38b4d41e-aaef-419c-b02c-e675ed6dfe63",
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/19.2large.jpg?alt=media&token=f7680b9c-6c09-4107-81d4-543cd4857384"
         ]
     },
     {
@@ -325,9 +325,9 @@
         "stock": 100,
         "brand": "Masterdog",
         "category": "Alimento Cachorro",
-        "thumbnail": "20large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/20large.jpg?alt=media&token=a5a20e1f-5fb7-446c-a005-883963e2e4a1",
         "images": [
-            "20large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/20large.jpg?alt=media&token=a5a20e1f-5fb7-446c-a005-883963e2e4a1"
         ]
     },
     {
@@ -341,10 +341,10 @@
         "stock": 100,
         "brand": "Cat Chow",
         "category": "Alimento Gato Adulto",
-        "thumbnail": "21large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/21large.jpg?alt=media&token=7a0cb986-c7ca-4ea6-bd10-37f2e877d876",
         "images": [
-            "21large.jpg",
-            "21.1large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/21large.jpg?alt=media&token=7a0cb986-c7ca-4ea6-bd10-37f2e877d876",
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/21.1large.jpg?alt=media&token=609eade8-5245-4e86-a377-c2ec863e8ff6"
         ]
     },
     {
@@ -358,9 +358,9 @@
         "stock": 100,
         "brand": "Whiskas",
         "category": "Alimento Gato Adulto",
-        "thumbnail": "22large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/22large.jpg?alt=media&token=ad38a745-543e-43a8-bbed-456a96c18f67",
         "images": [
-            "22large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/22large.jpg?alt=media&token=ad38a745-543e-43a8-bbed-456a96c18f67"
         ]
     },
     {
@@ -374,10 +374,10 @@
         "stock": 100,
         "brand": "Cat Chow",
         "category": "Alimento Gato Adulto",
-        "thumbnail": "23large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/23large.jpg?alt=media&token=a34bc98a-505e-4f0c-ab2b-0aa2514123e7",
         "images": [
-            "23large.jpg",
-            "23.1large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/23large.jpg?alt=media&token=a34bc98a-505e-4f0c-ab2b-0aa2514123e7",
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/23.1large.jpg?alt=media&token=78c24ee1-859d-44da-90de-d8f3ff6265f6"
         ]
     },
     {
@@ -391,11 +391,11 @@
         "stock": 100,
         "brand": "Purina One",
         "category": "Alimento Gato Adulto",
-        "thumbnail": "24large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/24large.jpg?alt=media&token=5dfd53ab-c68f-4718-b446-ace44714bf61",
         "images": [
-            "24large.jpg",
-            "24.1large.jpg",
-            "24.2large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/24large.jpg?alt=media&token=5dfd53ab-c68f-4718-b446-ace44714bf61",
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/24.1large.jpg?alt=media&token=1f0d713f-c4dd-4540-9035-1cc5f8dac232",
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/24.2large.jpg?alt=media&token=27bd77a5-aab1-4d93-9604-a6572f40619a"
         ]
     },
     {
@@ -409,11 +409,11 @@
         "stock": 100,
         "brand": "Purina One",
         "category": "Alimento Gato Adulto",
-        "thumbnail": "25large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/25large.jpg?alt=media&token=0343a79f-e1ce-42bc-b0ed-79ac251f5ce5",
         "images": [
-            "25large.jpg",
-            "25.1large.jpg",
-            "25.2large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/25large.jpg?alt=media&token=0343a79f-e1ce-42bc-b0ed-79ac251f5ce5",
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/25.1large.jpg?alt=media&token=76e37de7-cf6a-4c15-b2bc-f49c48658492",
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/25.2large.jpg?alt=media&token=cb3c6896-fb88-4ab2-a75e-6565d41a5eac"
         ]
     },
     {
@@ -427,9 +427,9 @@
         "stock": 100,
         "brand": "Whiskas",
         "category": "Alimento Gato Adulto",
-        "thumbnail": "26large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/26large.jpg?alt=media&token=292ca952-b6bd-406a-ad4a-92c2f3650724",
         "images": [
-            "26large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/26large.jpg?alt=media&token=292ca952-b6bd-406a-ad4a-92c2f3650724"
         ]
     },
     {
@@ -443,9 +443,9 @@
         "stock": 100,
         "brand": "Whiskas",
         "category": "Alimento Gato Adulto",
-        "thumbnail": "27large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/27large.jpg?alt=media&token=eed46e9e-57fb-4329-af49-906027255310",
         "images": [
-            "27large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/27large.jpg?alt=media&token=eed46e9e-57fb-4329-af49-906027255310"
         ]
     },
     {
@@ -459,9 +459,9 @@
         "stock": 100,
         "brand": "Whiskas",
         "category": "Alimento Gato Adulto",
-        "thumbnail": "28large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/28large.jpg?alt=media&token=fa6dd0e7-f0fc-427c-a92b-309039e4341c",
         "images": [
-            "28large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/28large.jpg?alt=media&token=fa6dd0e7-f0fc-427c-a92b-309039e4341c"
         ]
     },
     {
@@ -475,9 +475,9 @@
         "stock": 100,
         "brand": "Whiskas",
         "category": "Alimento Gato Adulto",
-        "thumbnail": "29large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/29large.jpg?alt=media&token=6d8ef89a-ec3a-4461-a88a-0faae85c2b2b",
         "images": [
-            "29large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/29large.jpg?alt=media&token=6d8ef89a-ec3a-4461-a88a-0faae85c2b2b"
         ]
     },
     {
@@ -491,9 +491,9 @@
         "stock": 100,
         "brand": "Whiskas",
         "category": "Alimento Gato Adulto",
-        "thumbnail": "30large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/30large.jpg?alt=media&token=82b43f8f-e4d5-4e52-b704-be3678551aaa",
         "images": [
-            "30large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/30large.jpg?alt=media&token=82b43f8f-e4d5-4e52-b704-be3678551aaa"
         ]
     },
     {
@@ -507,9 +507,9 @@
         "stock": 100,
         "brand": "Cat Chow",
         "category": "Alimento Gatito",
-        "thumbnail": "31large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/31large.jpg?alt=media&token=1ecd37e6-f078-46d1-a196-37491a4eae29",
         "images": [
-            "31large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/31large.jpg?alt=media&token=1ecd37e6-f078-46d1-a196-37491a4eae29"
         ]
     },
     {
@@ -523,9 +523,9 @@
         "stock": 100,
         "brand": "Whiskas",
         "category": "Alimento Gatito",
-        "thumbnail": "32large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/32large.jpg?alt=media&token=d82a4b8e-b4be-474f-8075-40a77862c5e9",
         "images": [
-            "32large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/32large.jpg?alt=media&token=d82a4b8e-b4be-474f-8075-40a77862c5e9"
         ]
     },
     {
@@ -539,10 +539,10 @@
         "stock": 100,
         "brand": "Cat Chow",
         "category": "Alimento Gatito",
-        "thumbnail": "33large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/33large.jpg?alt=media&token=f817a16e-3d38-49fc-8769-9de10d54529e",
         "images": [
-            "33large.jpg",
-            "33.1large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/33large.jpg?alt=media&token=f817a16e-3d38-49fc-8769-9de10d54529e",
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/33.1large.jpg?alt=media&token=cfceb04d-26ed-4e4b-99b1-e86552ce7bd3"
         ]
     },
     {
@@ -556,9 +556,9 @@
         "stock": 100,
         "brand": "Champion Cat",
         "category": "Alimento Gatito",
-        "thumbnail": "34large.jpg",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/34large.jpg?alt=media&token=1002f48c-f202-448f-864b-ad02e971f31a",
         "images": [
-            "34large.jpg"
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/34large.jpg?alt=media&token=1002f48c-f202-448f-864b-ad02e971f31a"
         ]
     }
 ]

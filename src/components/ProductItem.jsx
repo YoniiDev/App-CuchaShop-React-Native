@@ -1,10 +1,11 @@
-import { Image, StyleSheet, Text } from 'react-native'
+import { Image, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import Card from './Card'
 import { colors } from '../constants/colors'
 
 const ProductItem = ({ product }) => {
   return (
+
     <Card style={styles.additionalStylesCard}>
       <Text style={styles.textCategory}>{product.title}</Text>
       <Image
@@ -13,26 +14,24 @@ const ProductItem = ({ product }) => {
         source={{ uri: product.images[0] }}
       />
     </Card>
+
   )
 }
 
 export default ProductItem
 
 const styles = StyleSheet.create({
+  additionalStylesCard: {
+ borderColor: 'red',
+ borderWidth: 2
+  },
+
   image: {
-    height: 120,
-    width: 100,
+    height: 150,
+    width: 150,
     borderRadius: 8
   },
-  additionalStylesCard: {
-    paddingLeft: 10,
-    flexDirection: 'row',
-    height: 120,
-    width: 300,
-    justifyContent: 'space-between',
-    margin: 10
-  },
   textCategory: {
-    color: 'white'
+    color: 'black'
   }
 })
