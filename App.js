@@ -3,27 +3,34 @@ import Header from './src/components/Header'
 import Home from './src/screens/Home'
 import { colors } from './src/constants/colors';
 import ItemListCategory from './src/screens/ItemListCategory'
-import { useCallback, useState } from 'react';
-// import { useFonts } from "expo-font"
-// import * as SplashScreen from 'expo-splash-screen';
+import { useState } from 'react';
+import { useFonts } from "expo-font"
 
 const App = () => {
+  const [fontsLoaded, fontError] = useFonts({
+    'Roboto-Regular': require('./assets/fonts/Roboto/Roboto-Regular.ttf'),
+    'Pacifico-Regular': require('./assets/fonts/Pacifico/Pacifico-Regular.ttf'),
+  });
 
   const [categorySelected, setCategorySelected] = useState("")
 
-  return (
-    <View style={styles.container}>
-      <Header title={"CuchaShop"} />
-      {!categorySelected ? (
-        <Home setCategorySelected={setCategorySelected} />
-      ) : (
-        <ItemListCategory categorySelected={categorySelected}
-          setCategorySelected={setCategorySelected} />
-      )}
-    </View>
-  )
+  if (!fontsLoaded || fontError) {
+    return null
+  }
+  if (fontsLoaded && !fontError) {
+    return (
+      <View style={styles.container} >
+        <Header title={"CuchaShop"} />
+        {!categorySelected ? (
+          <Home setCategorySelected={setCategorySelected} />
+        ) : (
+          <ItemListCategory categorySelected={categorySelected}
+            setCategorySelected={setCategorySelected} />
+        )}
+      </View>
+    )
+  }
 }
-
 
 const styles = StyleSheet.create({
   container: {

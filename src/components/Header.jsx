@@ -39,6 +39,7 @@ const styles = StyleSheet.create({
     borderWidth: 1
   },
   textTitle: {
+    fontFamily: 'Pacifico-Regular',
     color: colors.white,
     fontWeight: 'bold',
     fontSize: 26,

@@ -12,13 +12,23 @@ const ItemListCategory = ({ categorySelected = "", setCategorySelected = () => {
   const [error, setError] = useState("")
 
   useEffect(() => {
-    let regex = /\d/
-    const hasDigits = (regex.test(keyWord));
+    const regexDigits = /\d/
+    const hasDigits = (regexDigits.test(keyWord));
 
     if (hasDigits) {
-      setError("No utilizar numeros")
+      setError("No utilizar números")
       return
     }
+
+    const regexThreeOrMoreChars = /[a-zA-Z]{3,}/
+    const regexZeroChars = /[a-zA-Z]{0}/
+    const hasThreeOrMoreChars = regexThreeOrMoreChars.test(keyWord)
+    const hasZeroChars = regexZeroChars.test(keyWord)
+    if(!hasThreeOrMoreChars && !hasZeroChars){
+      setError('Ingrese 3 o más letras')
+      return
+    }
+
     //PRODUCTOS FILTRADOS POR CATEGORIAS
     const productsPrefiltered = products.filter(product => product.category === categorySelected)
 
