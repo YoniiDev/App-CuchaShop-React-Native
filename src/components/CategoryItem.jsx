@@ -5,9 +5,9 @@ import Card from './Card';
 
 const CategoryItem = ({ category, selectCategory = () => { } }) => {
     return (
-        <Card>
+        <Card style={styles.additionalStyleCard}>
             <Pressable onPress={() => selectCategory(category)}>
-                <Text style={styles.text}>{category}</Text>
+                <Text style={styles.textCategory}>{category}</Text>
             </Pressable>
         </Card>
     )
@@ -16,10 +16,20 @@ const CategoryItem = ({ category, selectCategory = () => { } }) => {
 export default CategoryItem
 
 const styles = StyleSheet.create({
-
-    text: {
-        color: 'red',
+    additionalStyleCard:{
+        backgroundColor: colors.green3,
+        height: 30,
+        width: 200,
+        borderRadius: 18,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginVertical: 5
+    },
+    textCategory: {
+        color: colors.white,
         textAlign: 'center',
-        fontSize: 20,
+        fontSize: 18,
+        borderColor: 'red',
+        borderWidth: 2 
     }
 })

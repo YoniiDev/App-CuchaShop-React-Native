@@ -7,6 +7,8 @@ const Home = ({ setCategorySelected }) => {
     return (
         <View style={styles.flatListContainer}>
             <FlatList
+                style={styles.flatList}
+                alignItems='center'
                 showsVerticalScrollIndicator={false}
                 keyExtractor={category => category}
                 data={categories.sort()}
@@ -25,12 +27,9 @@ export default Home
 
 const styles = StyleSheet.create({
     flatListContainer: {
-        backgroundColor: colors.yellow1,
+        backgroundColor: colors.green1,
         width: '100%',
         height: '100%',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-        gap: 10
-    }
+    },
+    
 })

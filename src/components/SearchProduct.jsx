@@ -4,6 +4,7 @@ import { FontAwesome } from "@expo/vector-icons"
 import { FontAwesome5 } from "@expo/vector-icons"
 import { AntDesign } from "@expo/vector-icons"
 import { colors } from '../constants/colors'
+import { Colors } from 'react-native/Libraries/NewAppScreen'
 
 
 const SearchProduct = ({ onSearch = () => { }, error = "", goBack = () => { } }) => {
@@ -34,17 +35,20 @@ export default SearchProduct
 
 const styles = StyleSheet.create({
   container: {
+    width: '100%',
     flexDirection: 'row',
-    justifyContent: 'center',
+    justifyContent: 'space-between',
     alignItems: 'center',
-    gap: 18
+    backgroundColor: colors.green3,
+    paddingBottom: 10
   },
   input: {
-    width: 200,
+    width: 240,
+    height:35,
     padding: 8,
-    fontSize: 18,
-    backgroundColor: 'white',
-    color: 'black',
-    borderRadius: 10
+    fontSize: 14,
+    backgroundColor: colors.white,
+    color: colors.black,
+    borderRadius: 18
   }
 })
