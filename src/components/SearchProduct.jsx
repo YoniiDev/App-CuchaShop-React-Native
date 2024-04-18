@@ -1,71 +1,45 @@
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native'
 import React, { useState } from 'react'
-import { FontAwesome } from "@expo/vector-icons"
 import { FontAwesome5 } from "@expo/vector-icons"
 import { AntDesign } from "@expo/vector-icons"
 import { colors } from '../constants/colors'
-import { Colors } from 'react-native/Libraries/NewAppScreen'
+
 
 
 const SearchProduct = ({ onSearch = () => { }, error = "", goBack = () => { } }) => {
   const [keyword, setKeyword] = useState("")
+  const hasError = error !== "";
+  const containerStyle = hasError ? styles.containerError : styles.container;
+  const inputStyle = hasError ? styles.inputError : styles.input;
+
   return (
-    <>
-      {error !== 'No utilizar números' ? (
-        <View style={styles.container1}>
+    <View style={containerStyle}>
 
-          <TextInput
-            style={styles.input}
-            placeholder='Search...'
-            value={keyword}
-            onChangeText={setKeyword}
-          />
-          {error ? <Text style={styles.errorMessage}>{error}</Text> : null}
+      <TextInput
+        style={inputStyle}
+        placeholder='Search...'
+        value={keyword}
+        onChangeText={setKeyword}
+      />
+      {error ? <Text style={styles.errorMessage}>{error}</Text> : null}
 
-          <Pressable onPress={() => onSearch(keyword)}>
-            <FontAwesome5 name="searchengin" size={28} color="white" />
-          </Pressable>
-          <Pressable onPress={() => setKeyword("")}>
-            <FontAwesome5 name="eraser" size={28} color="white" />
-          </Pressable>
-          <Pressable onPress={goBack}>
-            <AntDesign name="back" size={28} color="white" />
-          </Pressable>
-        </View>
-      )
-        : (
-          <View style={styles.container2}>
-
-            <TextInput
-              style={styles.input2}
-              placeholder='Search...'
-              value={keyword}
-              onChangeText={setKeyword}
-            />
-            {error ? <Text style={styles.errorMessage}>{error}</Text> : null}
-
-            <Pressable onPress={() => onSearch(keyword)}>
-              <FontAwesome5 name="searchengin" size={28} color="white" />
-            </Pressable>
-            <Pressable onPress={() => setKeyword("")}>
-              <FontAwesome5 name="eraser" size={28} color="white" />
-            </Pressable>
-            <Pressable onPress={goBack}>
-              <AntDesign name="back" size={28} color="white" />
-            </Pressable>
-          </View>)
-
-      }
-
-    </>
-
+      <Pressable onPress={() => onSearch(keyword)}>
+        <FontAwesome5 name="searchengin" size={28} color="white" />
+      </Pressable>
+      <Pressable onPress={() => setKeyword("")}>
+        <FontAwesome5 name="eraser" size={28} color="white" />
+      </Pressable>
+      <Pressable onPress={goBack}>
+        <AntDesign name="back" size={28} color="white" />
+      </Pressable>
+    </View>
   )
 }
 
 export default SearchProduct
 
 const styles = StyleSheet.create({
-  container1: {
+  container: {
     width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -75,7 +49,7 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: 'red',
   },
-  container2: {
+  containerError: {
     width: '100%',
     flexDirection: 'row',
     justifyContent: 'space-between',
@@ -98,8 +72,8 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: 'red',
     position: 'relative',
-  }, 
-  input2: {
+  },
+  inputError: {
     width: 240,
     height: 35,
     padding: 8,
@@ -110,7 +84,7 @@ const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: 'red',
     position: 'relative',
-    textDecorationLine:'underline'
+    textDecorationLine: 'underline'
   },
   errorMessage: {
     fontSize: 14,

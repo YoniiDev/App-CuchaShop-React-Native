@@ -21,10 +21,9 @@ const ItemListCategory = ({ categorySelected = "", setCategorySelected = () => {
     }
 
     const regexThreeOrMoreChars = /[a-zA-Z]{3,}/
-    const regexZeroChars = /[a-zA-Z]{0}/
     const hasThreeOrMoreChars = regexThreeOrMoreChars.test(keyWord)
-    const hasZeroChars = regexZeroChars.test(keyWord)
-    if(!hasThreeOrMoreChars && !hasZeroChars){
+
+    if (!hasThreeOrMoreChars && keyWord.length) {
       setError('Ingrese 3 o más letras')
       return
     }
