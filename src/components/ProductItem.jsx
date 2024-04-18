@@ -71,6 +71,7 @@ const styles = StyleSheet.create({
     padding: 4
   },
   textTitle: {
+    fontFamily: 'OpenSans_Condensed-Regular',
     fontSize: 14,
     color: colors.black,
     borderWidth: 1,
@@ -83,19 +84,21 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between'
   },
   textOfferPrice: {
+    fontFamily: 'OpenSans_SemiCondensed-Bold',
     fontSize: 14,
-    fontWeight: 'bold',
     color: colors.black,
     borderWidth: 1,
     borderColor: 'red'
   },
   textDiscountPercentage: {
+    fontFamily: 'OpenSans_SemiCondensed-Regular',
     fontSize: 14,
     color: colors.green3,
     borderWidth: 1,
     borderColor: 'red'
   },
   textNormalPrice: {
+    fontFamily: 'OpenSans_SemiCondensed-Regular',
     fontSize: 14,
     color: colors.gray2,
     borderWidth: 1,
@@ -103,8 +106,8 @@ const styles = StyleSheet.create({
     textDecorationLine: 'line-through'
   },
   textNormalPrice2: {
+    fontFamily: 'OpenSans_SemiCondensed-Bold',
     fontSize: 14,
-    fontWeight: 'bold',
     color: colors.black,
     borderWidth: 1,
     borderColor: 'red',

@@ -39,11 +39,10 @@ const styles = StyleSheet.create({
     borderWidth: 1
   },
   textTitle: {
-    fontFamily: 'Pacifico-Regular',
+    fontFamily: 'OpenSans_SemiCondensed-ExtraBold',
     color: colors.white,
-    fontWeight: 'bold',
-    fontSize: 26,
-    backgroundColor: 'black',
+    fontSize: 24,
+    // backgroundColor: 'black',
     borderColor: 'red',
     borderWidth: 1
   },

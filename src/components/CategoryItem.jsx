@@ -16,20 +16,24 @@ const CategoryItem = ({ category, selectCategory = () => { } }) => {
 export default CategoryItem
 
 const styles = StyleSheet.create({
-    additionalStyleCard:{
+    additionalStyleCard: {
         backgroundColor: colors.green3,
         height: 30,
-        width: 200,
+        width: 220,
         borderRadius: 18,
         justifyContent: 'center',
         alignItems: 'center',
-        marginVertical: 5
+        marginVertical: 5,
+        borderColor: 'red',
+        borderWidth: 2,
     },
     textCategory: {
+        fontFamily: 'OpenSans_SemiCondensed-Medium',
         color: colors.white,
         textAlign: 'center',
-        fontSize: 18,
+        fontSize: 16,
         borderColor: 'red',
-        borderWidth: 2 
+        borderWidth: 2,
+        paddingTop:3
     }
 })

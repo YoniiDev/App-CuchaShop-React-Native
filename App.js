@@ -8,8 +8,31 @@ import { useFonts } from "expo-font"
 
 const App = () => {
   const [fontsLoaded, fontError] = useFonts({
-    'Roboto-Regular': require('./assets/fonts/Roboto/Roboto-Regular.ttf'),
-    'Pacifico-Regular': require('./assets/fonts/Pacifico/Pacifico-Regular.ttf'),
+    
+    //OPEN SANS
+    'OpenSans-Light': require('./assets/fonts/Open_Sans/static/OpenSans-Light.ttf'),
+    'OpenSans-Regular': require('./assets/fonts/Open_Sans/static/OpenSans-Regular.ttf'),
+    'OpenSans-Medium': require('./assets/fonts/Open_Sans/static/OpenSans-Medium.ttf'),
+    'OpenSans-SemiBold': require('./assets/fonts/Open_Sans/static/OpenSans-SemiBold.ttf'),
+    'OpenSans-Bold': require('./assets/fonts/Open_Sans/static/OpenSans-Bold.ttf'),
+    'OpenSans-ExtraBold': require('./assets/fonts/Open_Sans/static/OpenSans-ExtraBold.ttf'),
+    
+    //OPEN SANS SEMICONDENSED
+    'OpenSans_SemiCondensed-Light': require('./assets/fonts/Open_Sans/static/OpenSans_SemiCondensed-Light.ttf'),
+    'OpenSans_SemiCondensed-Regular': require('./assets/fonts/Open_Sans/static/OpenSans_SemiCondensed-Regular.ttf'),
+    'OpenSans_SemiCondensed-Medium': require('./assets/fonts/Open_Sans/static/OpenSans_SemiCondensed-Medium.ttf'),
+    'OpenSans_SemiCondensed-SemiBold': require('./assets/fonts/Open_Sans/static/OpenSans_SemiCondensed-SemiBold.ttf'),
+    'OpenSans_SemiCondensed-Bold': require('./assets/fonts/Open_Sans/static/OpenSans_SemiCondensed-Bold.ttf'),
+    'OpenSans_SemiCondensed-ExtraBold': require('./assets/fonts/Open_Sans/static/OpenSans_SemiCondensed-ExtraBold.ttf'),
+
+    //OPEN SANS CONDENSED
+    'OpenSans_Condensed-Light': require('./assets/fonts/Open_Sans/static/OpenSans_Condensed-Light.ttf'),
+    'OpenSans_Condensed-Regular': require('./assets/fonts/Open_Sans/static/OpenSans_Condensed-Regular.ttf'),
+    'OpenSans_Condensed-Medium': require('./assets/fonts/Open_Sans/static/OpenSans_Condensed-Medium.ttf'),
+    'OpenSans_Condensed-SemiBold': require('./assets/fonts/Open_Sans/static/OpenSans_Condensed-SemiBold.ttf'),
+    'OpenSans_Condensed-Bold': require('./assets/fonts/Open_Sans/static/OpenSans_Condensed-Bold.ttf'),
+    'OpenSans_Condensed-ExtraBold': require('./assets/fonts/Open_Sans/static/OpenSans_Condensed-ExtraBold.ttf'),
+    
   });
 
   const [categorySelected, setCategorySelected] = useState("")
