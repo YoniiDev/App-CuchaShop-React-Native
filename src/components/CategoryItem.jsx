@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginVertical: 5,
         borderColor: 'red',
-        borderWidth: 2,
+        borderWidth: 1,
     },
     textCategory: {
         fontFamily: 'OpenSans_SemiCondensed-Medium',
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontSize: 16,
         borderColor: 'red',
-        borderWidth: 2,
+        borderWidth: 1,
         paddingTop:3
     }
 })

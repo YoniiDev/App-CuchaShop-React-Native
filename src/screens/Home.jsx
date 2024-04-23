@@ -28,8 +28,12 @@ export default Home
 const styles = StyleSheet.create({
     flatListContainer: {
         backgroundColor: colors.green1,
-        width: '100%',
-        height: '100%',
+        borderWidth: 2,
+        borderColor: 'red',
+        flex: 1
     },
-    
+    flatList:{
+        borderWidth: 2,
+        borderColor: 'blue',
+    }
 })

@@ -1,0 +1,1 @@
+export const baseURL = "https://cuchashop-react-native-default-rtdb.firebaseio.com/"
