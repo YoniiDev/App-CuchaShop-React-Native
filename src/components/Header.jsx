@@ -33,7 +33,8 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         borderColor: 'red',
-        borderWidth: 1
+        borderWidth: 1,
+        paddingHorizontal: 5
     },
     brandAndLogoContainer: {
         flexDirection: 'row',

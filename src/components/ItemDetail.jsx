@@ -1,33 +1,21 @@
-import { ScrollView, Image, Button, StyleSheet, Text, View, useWindowDimensions } from 'react-native'
+import { ScrollView, Image, Button, StyleSheet, Text, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import allProducts from '../data/products.json'
 import { colors } from '../constants/colors'
 
 const ItemDetail = ({ idSelected, setProductSelected }) => {
-    console.log(idSelected);
 
     const [product, setProduct] = useState(null)
-    // const [orientation, setOrientation] = useState('portrait')
-    // const { width, height } = useWindowDimensions
-
-    // useEffect(() => {
-    //     if (width > height) setOrientation('landscape')
-    //     else setOrientation('portrait')
-    // }, [width, height])
-    // console.log(orientation);
 
     useEffect(() => {
         const productSelected = allProducts.find((product) => product.id === idSelected)
         setProduct(productSelected)
     }, [idSelected])
-    console.log(product);
+
     return (
         <ScrollView style={styles.main}>
             {product && product.offerPrice > 0 ? (
-                <View style={//orientation === 'portrait'?
-                    styles.mainContainer
-                    // : styles.mainContainerLandscape
-                }>
+                <View style={styles.mainContainer}>
                     <View style={styles.cardContainer}>
                         <Text style={styles.textTitle}>{product.title}</Text>
                         <View style={styles.imageContainer}>
@@ -62,10 +50,7 @@ const ItemDetail = ({ idSelected, setProductSelected }) => {
             )
                 :
                 product && product.offerPrice === 0 ? (
-                    <View style={//orientation === 'portrait'?
-                        styles.mainContainer
-                        // : styles.mainContainerLandscape
-                    }>
+                    <View style={styles.mainContainer}>
                         <View style={styles.cardContainer}>
                             <Text style={styles.textTitle}>{product.title}</Text>
                             <View style={styles.imageContainer}>

@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { FontAwesome5 } from "@expo/vector-icons"
 import { AntDesign } from "@expo/vector-icons"
 import { colors } from '../constants/colors'
+import { Ionicons } from '@expo/vector-icons';
 
 
 
@@ -24,7 +25,7 @@ const SearchProduct = ({ onSearch = () => { }, error = "", goBack = () => { } })
             {error ? <Text style={styles.errorMessage}>{error}</Text> : null}
 
             <Pressable onPress={() => onSearch(keyword)}>
-                <FontAwesome5 name="searchengin" size={28} color="white" />
+                <Ionicons name="search" size={28} color="white" />
             </Pressable>
             <Pressable onPress={() => setKeyword("")}>
                 <FontAwesome5 name="eraser" size={28} color="white" />
@@ -48,6 +49,7 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
         borderWidth: 2,
         borderColor: 'red',
+        padding: 5
     },
     containerError: {
         width: '100%',
@@ -58,7 +60,8 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
         borderWidth: 2,
         borderColor: 'red',
-        height: 70
+        height: 70,
+        padding: 5
     },
 
     input: {
