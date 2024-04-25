@@ -1,11 +1,7 @@
-import { Platform, SafeAreaView, StatusBar, StyleSheet, View } from 'react-native';
-import Header from './src/components/Header'
-import Home from './src/screens/Home'
+import { Platform, SafeAreaView, StatusBar, StyleSheet } from 'react-native';
 import { colors } from './src/constants/colors';
-import ItemListCategory from './src/screens/ItemListCategory'
-import { useState } from 'react';
 import { useFonts } from "expo-font"
-import ItemDetail from './src/components/ItemDetail';
+import Navigator from './src/navigation/Navigator';
 
 
 const App = () => {
@@ -29,33 +25,13 @@ const App = () => {
 
     });
 
-    const [categorySelected, setCategorySelected] = useState("")
-    const [itemIdSelected, setItemIdSelected] = useState("")
-
     if (!fontsLoaded || fontError) {
         return null
     }
     if (fontsLoaded && !fontError) {
         return (
             <SafeAreaView style={styles.container} >
-                <Header title={"CuchaShop"} />
-                {!categorySelected ? (
-                    <Home setCategorySelected={setCategorySelected} />
-                ) :
-
-                    !itemIdSelected ? (
-                        <ItemListCategory
-                            categorySelected={categorySelected}
-                            setCategorySelected={setCategorySelected}
-                            setItemIdSelected={setItemIdSelected} />
-                    )
-
-                        :
-                        <ItemDetail
-                            idSelected={itemIdSelected}
-                            setProductSelected={setItemIdSelected} />
-
-                }
+                <Navigator />
             </SafeAreaView>
         )
     }
