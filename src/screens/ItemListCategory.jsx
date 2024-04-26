@@ -6,10 +6,13 @@ import products from '../data/products.json'
 import ProductItem from '../components/ProductItem'
 import SearchProduct from '../components/SearchProduct'
 
-const ItemListCategory = ({ categorySelected = "", setCategorySelected = () => { }, setItemIdSelected = () => { } }) => {
+const ItemListCategory = ({ setCategorySelected = () => { }, setItemIdSelected = () => { }, navigation, route }) => {
+
     const [keyWord, setKeyword] = useState("")
     const [productsFiltered, setProductsFiltered] = useState([])
     const [error, setError] = useState("")
+
+    const { category: categorySelected } = route.params
 
     useEffect(() => {
         const regexDigits = /\d/
@@ -39,12 +42,12 @@ const ItemListCategory = ({ categorySelected = "", setCategorySelected = () => {
 
     return (
         <View style={styles.flatListAndSearchContainer}>
-            <SearchProduct error={error} onSearch={setKeyword} goBack={() => setCategorySelected("")} />
+            <SearchProduct error={error} onSearch={setKeyword} goBack={() => navigation.goBack()} />
 
             <FlatList
                 style={styles.flatList}
                 data={productsFiltered}
-                renderItem={({ item }) => <ProductItem product={item} setItemIdSelected={setItemIdSelected} />}
+                renderItem={({ item }) => <ProductItem product={item} navigation={navigation} />}
                 keyExtractor={(producto) => producto.id}
                 numColumns={2}
                 alignItems='center'

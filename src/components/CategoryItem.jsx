@@ -3,12 +3,12 @@ import React, { useState } from 'react'
 import { colors } from '../constants/colors';
 import Card from './Card';
 
-const CategoryItem = ({ category, selectCategory = () => { } }) => {
+const CategoryItem = ({ category, navigation }) => {
 
 
     return (
         <Card style={styles.additionalStyleCard}>
-            <Pressable style={styles.pressable} onPress={() => selectCategory(category)}>
+            <Pressable style={styles.pressable} onPress={() => navigation.navigate('ItemListCategory', {category})}>
                 <View style={styles.imageContainer}>
                     {category === "Alimento Cachorro" && <Image style={styles.imageCategory} resizeMode='cover' source={{ uri: 'https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/alimentocachorro.jpg?alt=media&token=1a692c37-d783-42dc-812a-460fb9c496f2' }} />}
                     {category === "Alimento Perro Adulto" && <Image style={styles.imageCategory} resizeMode='cover' source={{ uri: 'https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/alimentoperroadulto.jpg?alt=media&token=cce8f958-7b81-46b8-8df5-12feb91b17e0' }} />}

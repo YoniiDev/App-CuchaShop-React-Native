@@ -3,7 +3,9 @@ import React, { useEffect, useState } from 'react'
 import allProducts from '../data/products.json'
 import { colors } from '../constants/colors'
 
-const ItemDetail = ({ idSelected, setProductSelected }) => {
+const ItemDetail = ({ route, navigation }) => {
+
+    const { productId: idSelected } = route.params
 
     const [product, setProduct] = useState(null)
 
@@ -39,7 +41,7 @@ const ItemDetail = ({ idSelected, setProductSelected }) => {
 
                     <View style={styles.buttonConatiner}>
                         <Button title='Añadir'></Button>
-                        <Button onPress={() => setProductSelected("")} title="Volver" />
+                        <Button onPress={() => navigation.goBack()} title="Volver" />
                     </View>
 
                     <View style={styles.descriptionContainer}>
@@ -69,7 +71,7 @@ const ItemDetail = ({ idSelected, setProductSelected }) => {
 
                         <View style={styles.buttonConatiner}>
                             <Button title='Añadir'></Button>
-                            <Button onPress={() => setProductSelected("")} title="Volver" />
+                            <Button onPress={() => navigation.goBack()} title="Volver" />
                         </View>
 
                         <View style={styles.descriptionContainer}>

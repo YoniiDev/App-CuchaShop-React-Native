@@ -9,10 +9,26 @@ import Header from '../components/Header'
 
 const Stack = createNativeStackNavigator()
 const Navigator = () => {
+
     return (
         <NavigationContainer>
-            <Header title={"CuchaShop"} />
-            <Stack.Navigator>
+            <Stack.Navigator
+                initialRouteName='Home'
+                screenOptions={
+                    ({ route }) => (
+                        
+                        {
+                            header: () => {
+                                
+                                return <Header title={
+                                    route.name === 'Home' ? 'CuchaShop' :
+                                        route.name === 'ItemListCategory' ? route.params.category :
+                                            route.name === 'ItemDetail' ? route.params.productId :
+                                        ""} />
+                            }
+                        }
+                    )
+                }>
                 <Stack.Screen
                     component={Home}
                     name='Home'
@@ -26,7 +42,7 @@ const Navigator = () => {
                     name='ItemDetail'
                 />
             </Stack.Navigator>
-        </NavigationContainer>
+        </NavigationContainer >
     )
 }
 

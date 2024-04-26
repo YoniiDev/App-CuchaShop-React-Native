@@ -3,13 +3,13 @@ import React from 'react'
 import Card from './Card'
 import { colors } from '../constants/colors'
 
-const ProductItem = ({ product, setItemIdSelected = () => { } }) => {
+const ProductItem = ({ product, navigation }) => {
 
     return (
         <>
             {product.offerPrice > 0 ?
                 <Card style={styles.additionalStylesCard}>
-                    <Pressable style={styles.pressable} onPress={() => setItemIdSelected(product.id)}>
+                    <Pressable style={styles.pressable} onPress={() => navigation.navigate('ItemDetail', { productId: product.id })}>
                         <View style={styles.imageContainer}>
                             <Image
                                 resizeMode='contain'
@@ -31,7 +31,7 @@ const ProductItem = ({ product, setItemIdSelected = () => { } }) => {
                 :
 
                 <Card style={styles.additionalStylesCard}>
-                    <Pressable style={styles.pressable} onPress={() => setItemIdSelected(product.id)}>
+                    <Pressable style={styles.pressable} onPress={() => navigation.navigate('ItemDetail', { productId: product.id })}>
                         <View style={styles.imageContainer}>
                             <Image
                                 resizeMode='contain'
