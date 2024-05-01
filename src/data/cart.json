@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "title": "Alimento perro adulto Champion Dog carne y pollo 15 Kg",
+        "description": "Champion Dog Adulto te ofrece un alimento 100% completo y balanceado, desarrollado especialmente para satisfacer todos sus requerimientos nutricionales; formulado con la mejor proteína, la albúmina de huevo, con un completo perfil de aminoácidos esenciales para que tu perro se desarrolle sano y feliz.",
+        "offerPrice": 23190,
+        "normalPrice": 30290,
+        "discountPercentage": 0.23,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Champion Dog",
+        "category": "Alimento Perro Adulto",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/1large.jpg?alt=media&token=21e34c34-692c-4d10-a243-e2a352f2a915",
+        "images": [
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/1large.jpg?alt=media&token=21e34c34-692c-4d10-a243-e2a352f2a915"
+        ],
+        "quantity": 2
+    },
+    {
+        "id": 2,
+        "title": "Alimento perro adulto Cannes sabor carne y cereales 15 Kg",
+        "description": "Alimento perro adulto CANNES® sabor Carne y Cereales es una comida completa y balanceada con ingredientes seleccionados de alta calidad, enriquecidos con vitaminas y minerales, que le brindan tu mascota una vida saludable. Formato 15 kg. Alimenta a tu mascota con tranquilidad, calidad certificada por DICTUC.",
+        "offerPrice": 19145,
+        "normalPrice": 27350,
+        "discountPercentage": 0.30,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Cannes",
+        "category": "Alimento Perro Adulto",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/2large.jpg?alt=media&token=a3574157-afd1-4a2e-8756-9232319f75ba",
+        "images": [
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/2large.jpg?alt=media&token=a3574157-afd1-4a2e-8756-9232319f75ba"
+        ],
+        "quantity": 1
+    },
+    {
+        "id": 10,
+        "title": "Alimento perro adulto Dog Chow medianos y grandes carne y pollo 15 Kg",
+        "description": "Perros adultos de 1 a 7 años. Nivel adecuado de proteínas, grasas y otros nutrientes para prevenir la obesidad y mantener las articulaciones sanas en perros de razas medianas y grandes.",
+        "offerPrice": 0,
+        "normalPrice": 42390,
+        "discountPercentage": 0,
+        "rating": 4.69,
+        "stock": 100,
+        "brand": "Dog Chow",
+        "category": "Alimento Perro Adulto",
+        "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/10large.jpg?alt=media&token=3f068cf9-cd8f-46a7-811b-610bda02735b",
+        "images": [
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/10large.jpg?alt=media&token=3f068cf9-cd8f-46a7-811b-610bda02735b",
+            "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/10.1large.jpg?alt=media&token=ee753866-6375-4d5d-ac07-870604693f59"
+        ],
+        "quantity": 3
+    }
+]

@@ -4,16 +4,17 @@ import CategoryItem from '../components/CategoryItem'
 import categories from '../data/categories.json'
 
 const Home = ({ navigation }) => {
-
+    
     return (
         <View style={styles.flatListContainer}>
             <FlatList
                 style={styles.flatList}
                 alignItems='center'
                 showsVerticalScrollIndicator={false}
-                keyExtractor={category => category}
-                data={categories.sort()}
-                renderItem={({ item }) => (
+                keyExtractor={category => category.category}
+                data={categories}
+                renderItem={({ item }) => 
+                (
                     <CategoryItem
                         navigation={navigation}
                         category={item}

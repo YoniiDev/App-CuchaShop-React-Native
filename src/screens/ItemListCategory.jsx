@@ -15,6 +15,7 @@ const ItemListCategory = ({ setCategorySelected = () => { }, setItemIdSelected =
     const { category: categorySelected } = route.params
 
     useEffect(() => {
+        
         const regexDigits = /\d/
         const hasDigits = (regexDigits.test(keyWord));
 
@@ -32,13 +33,14 @@ const ItemListCategory = ({ setCategorySelected = () => { }, setItemIdSelected =
         }
 
         //PRODUCTOS FILTRADOS POR CATEGORIAS
-        const productsPrefiltered = products.filter(product => product.category === categorySelected)
-
+        const productsPrefiltered = products.filter(product => product.category === categorySelected.category)
+        
         //PODUCTOS FILTRADOS POR NOMBRES
         const productsFilter = productsPrefiltered.filter(product => product.title.toLocaleLowerCase().includes(keyWord.toLocaleLowerCase()))
         setProductsFiltered(productsFilter)
         setError("")
-    }, [keyWord, categorySelected])
+        
+    }, [keyWord, categorySelected.category])
 
     return (
         <View style={styles.flatListAndSearchContainer}>

@@ -1,21 +1,18 @@
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
-import React, { useState } from 'react'
+import React from 'react'
 import { colors } from '../constants/colors';
 import Card from './Card';
 
 const CategoryItem = ({ category, navigation }) => {
-
-
+    
     return (
         <Card style={styles.additionalStyleCard}>
             <Pressable style={styles.pressable} onPress={() => navigation.navigate('ItemListCategory', {category})}>
                 <View style={styles.imageContainer}>
-                    {category === "Alimento Cachorro" && <Image style={styles.imageCategory} resizeMode='cover' source={{ uri: 'https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/alimentocachorro.jpg?alt=media&token=1a692c37-d783-42dc-812a-460fb9c496f2' }} />}
-                    {category === "Alimento Perro Adulto" && <Image style={styles.imageCategory} resizeMode='cover' source={{ uri: 'https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/alimentoperroadulto.jpg?alt=media&token=cce8f958-7b81-46b8-8df5-12feb91b17e0' }} />}
-                    {category === "Alimento Gato Adulto" && <Image style={styles.imageCategory} resizeMode='cover' source={{ uri: 'https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/alimentogatoadulto2.jpg?alt=media&token=396baa1b-753d-4c3a-9002-0dada6368cfb' }} />}
-                    {category === "Alimento Gatito" && <Image style={styles.imageCategory} resizeMode='cover' source={{ uri: 'https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/alimentogatito.jpg?alt=media&token=447a4445-07a1-440d-acbd-c5dec3ac0e3a' }} />}
+                    <Image style={styles.imageCategory} resizeMode='cover' source={{ uri: category.image }} />
+                   
                 </View>
-                <Text style={styles.textCategory}>{category}</Text>
+                <Text style={styles.textCategory}>{category.category}</Text>
             </Pressable>
         </Card>
     )

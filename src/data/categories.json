@@ -1,6 +1,18 @@
 [
-    "Alimento Perro Adulto",
-    "Alimento Cachorro",
-    "Alimento Gato Adulto",
-    "Alimento Gatito"
+    {
+        "category": "Alimento Perro Adulto",
+        "image": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/alimentoperroadulto.jpg?alt=media&token=cce8f958-7b81-46b8-8df5-12feb91b17e0"
+    },
+    {
+        "category": "Alimento Cachorro",
+        "image": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/alimentocachorro.jpg?alt=media&token=1a692c37-d783-42dc-812a-460fb9c496f2"
+    },
+    {
+        "category": "Alimento Gato Adulto",
+        "image": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/alimentogatoadulto2.jpg?alt=media&token=396baa1b-753d-4c3a-9002-0dada6368cfb"
+    },
+    {
+        "category": "Alimento Gatito",
+        "image": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/alimentogatito.jpg?alt=media&token=447a4445-07a1-440d-acbd-c5dec3ac0e3a"
+    }
 ]

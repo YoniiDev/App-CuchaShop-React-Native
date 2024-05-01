@@ -1,0 +1,84 @@
+[
+    {
+        "id": 1,
+        "userId": 2,
+        "createdAt": 1679869276580,
+        "items": [
+            {
+                "id": 1,
+                "title": "Alimento perro adulto Champion Dog carne y pollo 15 Kg",
+                "description": "Champion Dog Adulto te ofrece un alimento 100% completo y balanceado, desarrollado especialmente para satisfacer todos sus requerimientos nutricionales; formulado con la mejor proteína, la albúmina de huevo, con un completo perfil de aminoácidos esenciales para que tu perro se desarrolle sano y feliz.",
+                "offerPrice": 23190,
+                "normalPrice": 30290,
+                "discountPercentage": 0.23,
+                "rating": 4.69,
+                "stock": 100,
+                "brand": "Champion Dog",
+                "category": "Alimento Perro Adulto",
+                "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/1large.jpg?alt=media&token=21e34c34-692c-4d10-a243-e2a352f2a915",
+                "images": [
+                    "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/1large.jpg?alt=media&token=21e34c34-692c-4d10-a243-e2a352f2a915"
+                ],
+                "quantity": 1
+            },
+            {
+                "id": 2,
+                "title": "Alimento perro adulto Cannes sabor carne y cereales 15 Kg",
+                "description": "Alimento perro adulto CANNES® sabor Carne y Cereales es una comida completa y balanceada con ingredientes seleccionados de alta calidad, enriquecidos con vitaminas y minerales, que le brindan tu mascota una vida saludable. Formato 15 kg. Alimenta a tu mascota con tranquilidad, calidad certificada por DICTUC.",
+                "offerPrice": 19145,
+                "normalPrice": 27350,
+                "discountPercentage": 0.30,
+                "rating": 4.69,
+                "stock": 100,
+                "brand": "Cannes",
+                "category": "Alimento Perro Adulto",
+                "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/2large.jpg?alt=media&token=a3574157-afd1-4a2e-8756-9232319f75ba",
+                "images": [
+                    "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/2large.jpg?alt=media&token=a3574157-afd1-4a2e-8756-9232319f75ba"
+                ],
+                "quantity": 2
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "userId": 2,
+        "createdAt": 1679832276580,
+        "items": [
+            {
+                "id": 3,
+                "title": "Alimento perro adulto Master Dog carne 15 Kg",
+                "description": "Alimento completo y balanceado recomendado para perros adultos de todos los tamaños y razas. Contiene Omega Full para mantener una piel sana que se refleja en un pelaje brillante.",
+                "offerPrice": 26990,
+                "normalPrice": 29990,
+                "discountPercentage": 0.10,
+                "rating": 4.69,
+                "stock": 100,
+                "brand": "Masterdog",
+                "category": "Alimento Perro Adulto",
+                "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/3large.jpg?alt=media&token=0ab322d3-a113-4806-ba66-7a0b895a17a3",
+                "images": [
+                    "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/3large.jpg?alt=media&token=0ab322d3-a113-4806-ba66-7a0b895a17a3"
+                ],
+                "quantity": 1
+            },
+            {
+                "id": 4,
+                "title": "Alimento perro adulto Pedigree pollo y cereales 15 Kg",
+                "description": "Esta es la etapa de vida más larga de tu perro, por lo que necesita estar sano y fuerte para disfrutar cada momento. Además su sistema digestivo ya ha madurado, por eso necesita de una correcta alimentación. Dale Pedigree® Adulto con proteína para mantener sus músculos fuertes y fibras para una óptima digestión.",
+                "offerPrice": 26880,
+                "normalPrice": 38750,
+                "discountPercentage": 0.31,
+                "rating": 4.69,
+                "stock": 100,
+                "brand": "Pedigree",
+                "category": "Alimento Perro Adulto",
+                "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/4large.jpg?alt=media&token=b662803f-3cf7-40c6-bdd5-aae853ea14e0",
+                "images": [
+                    "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/4large.jpg?alt=media&token=b662803f-3cf7-40c6-bdd5-aae853ea14e0"
+                ],
+                "quantity": 3
+            }
+        ]
+    }
+]
