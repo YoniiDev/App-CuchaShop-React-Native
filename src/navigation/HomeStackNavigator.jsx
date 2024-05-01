@@ -16,7 +16,7 @@ const HomeStackNavigator = () => {
 
                     {
                         header: () => {
-
+                            console.log(route);
                             return <Header title={
                                 route.name === 'Home' ? 'CuchaShop' :
                                     route.name === 'ItemListCategory' ? route.params.category.category :

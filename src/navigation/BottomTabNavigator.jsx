@@ -14,78 +14,82 @@ import { colors } from '../constants/colors'
 const Tab = createBottomTabNavigator()
 
 const BottomTabNavigator = () => {
-  return (
-    <Tab.Navigator
-      screenOptions={({ route }) => ({
-        header: () => {
-          return <Header title={route.name} route={route} />
-        },
-        tabBarShowLabel: false,
-        tabBarStyle: styles.tabBar,
-      })}
-    >
-      <Tab.Screen
-        name='Shop'
-        component={HomeStackNavigator}
-        options={{
-          tabBarIcon: ({ focused }) => {
-            return (
-              <View>
-                <FontAwesome5
-                  name='store'
-                  size={24}
-                  color={focused ? colors.green1 : "white"}
-                />
-              </View>
-            )
-          }
-        }}
-      />
-      <Tab.Screen
-        name='Cart'
-        component={CartStack}
-        options={{
-          tabBarIcon: ({ focused }) => {
-            return (
-              <View>
-                <FontAwesome5
-                  name="shopping-cart"
-                  size={24}
-                  color={focused ? colors.green1 : "white"}
-                />
-              </View>
-            )
-          }
-        }}
-      />
-      <Tab.Screen
-        name='Orders'
-        component={OrderStack}
-        options={{
-          tabBarIcon: ({ focused }) => {
-            return (
-              <View>
-                <Ionicons
-                  name='receipt'
-                  size={24}
-                  color={focused ? colors.green1 : "white"}
-                />
-              </View>
-            )
-          }
-        }}
-      />
-    </Tab.Navigator>
-  )
+    return (
+        <Tab.Navigator
+            screenOptions={({ route }) => ({
+                headerShown: route.name === 'Shop' ? false : true,
+                header: () => {
+                    return <Header title={
+                            route.name === 'Cart' ? 'Carrito de Compras' :
+                                route.name === 'Orders' ? 'Ordenes de Compra' :
+                                    ""} />
+                },
+                tabBarShowLabel: false,
+                tabBarStyle: styles.tabBar,
+            })}
+        >
+            <Tab.Screen
+                name='Shop'
+                component={HomeStackNavigator}
+                options={{
+                    tabBarIcon: ({ focused }) => {
+                        return (
+                            <View>
+                                <FontAwesome5
+                                    name='store'
+                                    size={24}
+                                    color={focused ? colors.green1 : "white"}
+                                />
+                            </View>
+                        )
+                    }
+                }}
+            />
+            <Tab.Screen
+                name='Cart'
+                component={CartStack}
+                options={{
+                    tabBarIcon: ({ focused }) => {
+                        return (
+                            <View>
+                                <FontAwesome5
+                                    name="shopping-cart"
+                                    size={24}
+                                    color={focused ? colors.green1 : "white"}
+                                />
+                            </View>
+                        )
+                    }
+                }}
+            />
+            <Tab.Screen
+                name='Orders'
+                component={OrderStack}
+                options={{
+                    tabBarIcon: ({ focused }) => {
+                        return (
+                            <View>
+                                <Ionicons
+                                    name='receipt'
+                                    size={24}
+                                    color={focused ? colors.green1 : "white"}
+                                />
+                            </View>
+                        )
+                    }
+                }}
+            />
+        </Tab.Navigator>
+    )
 }
 
 export default BottomTabNavigator
 
 const styles = StyleSheet.create({
-  tabBar: {
-    backgroundColor: colors.green3,
-    borderTopLeftRadius: 12,
-    borderTopRightRadius: 12,
-    color: "black",
-  },
+    tabBar: {
+        backgroundColor: colors.green3,
+        borderTopLeftRadius: 12,
+        borderTopRightRadius: 12,
+        color: "black",
+    },
 })
