@@ -1,12 +1,11 @@
 
-import { FlatList, StyleSheet, Text, View } from 'react-native'
+import { FlatList, StyleSheet, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
-import { colors } from '../constants/colors'
 import products from '../data/products.json'
 import ProductItem from '../components/ProductItem'
 import SearchProduct from '../components/SearchProduct'
 
-const ItemListCategory = ({ setCategorySelected = () => { }, setItemIdSelected = () => { }, navigation, route }) => {
+const ItemListCategory = ({ setCategorySelected = () => { }, navigation, route }) => {
 
     const [keyWord, setKeyword] = useState("")
     const [productsFiltered, setProductsFiltered] = useState([])
@@ -17,7 +16,7 @@ const ItemListCategory = ({ setCategorySelected = () => { }, setItemIdSelected =
     useEffect(() => {
         
         const regexDigits = /\d/
-        const hasDigits = (regexDigits.test(keyWord));
+        const hasDigits = regexDigits.test(keyWord)
 
         if (hasDigits) {
             setError("No utilizar números")
@@ -33,10 +32,10 @@ const ItemListCategory = ({ setCategorySelected = () => { }, setItemIdSelected =
         }
 
         //PRODUCTOS FILTRADOS POR CATEGORIAS
-        const productsPrefiltered = products.filter(product => product.category === categorySelected.category)
+        const productsPrefiltered = products.filter((product) => product.category === categorySelected.category)
         
         //PODUCTOS FILTRADOS POR NOMBRES
-        const productsFilter = productsPrefiltered.filter(product => product.title.toLocaleLowerCase().includes(keyWord.toLocaleLowerCase()))
+        const productsFilter = productsPrefiltered.filter((product) => product.title.toLocaleLowerCase().includes(keyWord.toLocaleLowerCase()))
         setProductsFiltered(productsFilter)
         setError("")
         
@@ -65,10 +64,10 @@ const styles = StyleSheet.create({
     flatListAndSearchContainer: {
         flex: 1,
         width: '100%',
-        backgroundColor: colors.green2,
         alignItems: 'center',
     },
     flatList: {
-        backgroundColor: 'black',
+        width: '100%',
+        paddingVertical: 10
     }
 })

@@ -80,5 +80,47 @@
                 "quantity": 3
             }
         ]
+    },
+    {
+        "id": 3,
+        "userId": 3,
+        "createdAt": 1679832276580,
+        "items": [
+            {
+                "id": 5,
+                "title": "Alimento perro adulto Purina One minis y pequeños pollo y carne 2 Kg",
+                "description": "Alimento perro adulto minis y pequeño sabor pollo y carne.",
+                "offerPrice": 8220,
+                "normalPrice": 13690,
+                "discountPercentage": 0.40,
+                "rating": 4.69,
+                "stock": 100,
+                "brand": "Purina One",
+                "category": "Alimento Perro Adulto",
+                "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/5large.jpg?alt=media&token=3eeb8bc3-8b06-44fc-9aa5-e72e1bc0aa60",
+                "images": [
+                    "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/5large.jpg?alt=media&token=3eeb8bc3-8b06-44fc-9aa5-e72e1bc0aa60"
+                ],
+                "quantity": 2
+            },
+            {
+                "id": 10,
+                "title": "Alimento perro adulto Dog Chow medianos y grandes carne y pollo 15 Kg",
+                "description": "Perros adultos de 1 a 7 años. Nivel adecuado de proteínas, grasas y otros nutrientes para prevenir la obesidad y mantener las articulaciones sanas en perros de razas medianas y grandes.",
+                "offerPrice": 0,
+                "normalPrice": 42390,
+                "discountPercentage": 0,
+                "rating": 4.69,
+                "stock": 100,
+                "brand": "Dog Chow",
+                "category": "Alimento Perro Adulto",
+                "thumbnail": "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/10large.jpg?alt=media&token=3f068cf9-cd8f-46a7-811b-610bda02735b",
+                "images": [
+                    "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/10large.jpg?alt=media&token=3f068cf9-cd8f-46a7-811b-610bda02735b",
+                    "https://firebasestorage.googleapis.com/v0/b/cuchashop-3cceb.appspot.com/o/10.1large.jpg?alt=media&token=ee753866-6375-4d5d-ac07-870604693f59"
+                ],
+                "quantity": 2
+            }
+        ]
     }
 ]

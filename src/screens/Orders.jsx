@@ -1,18 +1,23 @@
-import { FlatList, StyleSheet, Text, View } from 'react-native'
+import { FlatList, StyleSheet, View } from 'react-native'
 import React from 'react'
 import OrderData from '../data/orders.json'
 import OrderItem from '../components/OrderItem.jsx'
 
 const OrderScreen = () => {
     return (
-        <View>
+        <View style={styles.orderConatiner}>
             <FlatList
+                style={styles.flatlistContainer}
                 data={OrderData}
                 keyExtractor={orderItem => orderItem.id}
-                renderItem={({ item }) => {
+                renderItem={({ item, index }) => {
+                    
+                    const isLastOrderCard = index === OrderData.length - 1
+                   
                     return (
                         <OrderItem
                             order={item}
+                            isLastOrderCard={isLastOrderCard}
                         />
                     )
                 }}
@@ -23,4 +28,11 @@ const OrderScreen = () => {
 
 export default OrderScreen
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    orderConatiner: {
+        
+    },
+    flatlistContainer: {
+        padding: 10,
+    },
+})

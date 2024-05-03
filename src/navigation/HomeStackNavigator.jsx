@@ -1,7 +1,6 @@
-import { StyleSheet } from 'react-native'
 import React from 'react'
-import Header from '../components/Header'
 import Home from '../screens/Home'
+import Header from '../components/Header'
 import ItemListCategory from '../screens/ItemListCategory'
 import ItemDetail from '../screens/ItemDetail'
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
@@ -16,7 +15,6 @@ const HomeStackNavigator = () => {
 
                     {
                         header: () => {
-                            console.log(route);
                             return <Header title={
                                 route.name === 'Home' ? 'CuchaShop' :
                                     route.name === 'ItemListCategory' ? route.params.category.category :
@@ -34,7 +32,3 @@ const HomeStackNavigator = () => {
 }
 
 export default HomeStackNavigator
-
-const styles = StyleSheet.create({
-
-})

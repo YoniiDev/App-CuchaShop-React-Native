@@ -55,8 +55,8 @@ export default ProductItem
 const styles = StyleSheet.create({
     additionalStylesCard: {
         borderColor: colors.gray,
-        borderWidth: 2,
-        borderRadius: 4,
+        borderWidth: 1,
+        borderRadius: 6,
         margin: 2
 
     },
@@ -66,28 +66,28 @@ const styles = StyleSheet.create({
     imageContainer: {
         width: '100%',
         height: 170,
-        borderWidth: 1,
-        borderColor: 'red',
-        backgroundColor: 'blue'
+        backgroundColor: 'white',
+        borderTopLeftRadius: 6,
+        borderTopRightRadius: 6
     },
     image: {
         height: '100%',
         width: '100%',
-        borderRadius: 8
+        borderTopLeftRadius: 6,
+        borderTopRightRadius: 6
     },
     productInformationContainer: {
-        padding: 4
+        padding: 4,
+        borderBottomLeftRadius: 6,
+        borderBottomRightRadius: 6,
+        
     },
     textTitle: {
         fontFamily: 'OpenSans_Condensed-Regular',
         fontSize: 14,
         color: colors.black,
-        borderWidth: 1,
-        borderColor: 'red'
     },
     containOfferPriceAndDiscountPercentage: {
-        borderWidth: 1,
-        borderColor: 'blue',
         flexDirection: 'row',
         justifyContent: 'space-between'
     },
@@ -95,29 +95,21 @@ const styles = StyleSheet.create({
         fontFamily: 'OpenSans_SemiCondensed-Bold',
         fontSize: 14,
         color: colors.black,
-        borderWidth: 1,
-        borderColor: 'red'
     },
     textDiscountPercentage: {
         fontFamily: 'OpenSans_SemiCondensed-Regular',
         fontSize: 14,
         color: colors.green3,
-        borderWidth: 1,
-        borderColor: 'red'
     },
     textNormalPrice: {
         fontFamily: 'OpenSans_SemiCondensed-Regular',
         fontSize: 14,
         color: colors.gray2,
-        borderWidth: 1,
-        borderColor: 'red',
         textDecorationLine: 'line-through'
     },
     textNormalPrice2: {
         fontFamily: 'OpenSans_SemiCondensed-Bold',
         fontSize: 14,
         color: colors.black,
-        borderWidth: 1,
-        borderColor: 'red',
     }
 })

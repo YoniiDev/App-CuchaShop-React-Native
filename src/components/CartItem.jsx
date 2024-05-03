@@ -70,7 +70,8 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        gap: 5
+        gap: 5,
+        marginBottom: 6
     },
     imageContainer: {
         width: 80,

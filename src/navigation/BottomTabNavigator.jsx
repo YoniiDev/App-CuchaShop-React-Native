@@ -1,15 +1,15 @@
-import { StyleSheet, View } from 'react-native'
 import React from 'react'
-import CartStack from './CartStackNavigator'
-import OrderStack from './OrderStackNavigator'
-import Header from '../components/Header'
-import { FontAwesome5, FontAwesome6 } from "@expo/vector-icons"
-import { Ionicons } from '@expo/vector-icons'
-import CartTemp from '../screens/CartTemp'
-import OrdersTemp from '../screens/OrdersTemp'
+import { StyleSheet, View } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import HomeStackNavigator from './HomeStackNavigator'
 import { colors } from '../constants/colors'
+import CartStack from './CartStackNavigator'
+import OrderStack from './OrderStackNavigator'
+import Header from '../components/Header'
+import { FontAwesome5 } from "@expo/vector-icons"
+import { Ionicons } from '@expo/vector-icons'
+import CartTemp from '../screens/CartTemp'
+import OrdersTemp from '../screens/OrdersTemp'
 
 const Tab = createBottomTabNavigator()
 
@@ -20,9 +20,9 @@ const BottomTabNavigator = () => {
                 headerShown: route.name === 'Shop' ? false : true,
                 header: () => {
                     return <Header title={
-                            route.name === 'Cart' ? 'Carrito de Compras' :
-                                route.name === 'Orders' ? 'Ordenes de Compra' :
-                                    ""} />
+                        route.name === 'Cart' ? 'Carrito de Compras' :
+                            route.name === 'Orders' ? 'Ordenes de Compra' :
+                                ""} />
                 },
                 tabBarShowLabel: false,
                 tabBarStyle: styles.tabBar,
@@ -90,6 +90,5 @@ const styles = StyleSheet.create({
         backgroundColor: colors.green3,
         borderTopLeftRadius: 12,
         borderTopRightRadius: 12,
-        color: "black",
     },
 })

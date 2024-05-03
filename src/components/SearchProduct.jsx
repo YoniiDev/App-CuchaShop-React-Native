@@ -5,8 +5,6 @@ import { AntDesign } from "@expo/vector-icons"
 import { colors } from '../constants/colors'
 import { Ionicons } from '@expo/vector-icons';
 
-
-
 const SearchProduct = ({ onSearch = () => { }, error = "", goBack = () => { } }) => {
     const [keyword, setKeyword] = useState("")
     const hasError = error !== "";
@@ -18,7 +16,7 @@ const SearchProduct = ({ onSearch = () => { }, error = "", goBack = () => { } })
 
             <TextInput
                 style={inputStyle}
-                placeholder='Search...'
+                placeholder='Buscar... 🐕‍🦺'
                 value={keyword}
                 onChangeText={setKeyword}
             />
@@ -42,14 +40,13 @@ export default SearchProduct
 const styles = StyleSheet.create({
     container: {
         width: '100%',
+        height: 48,
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'flex-start',
         backgroundColor: colors.green3,
         paddingBottom: 10,
-        borderWidth: 2,
-        borderColor: 'red',
-        padding: 5
+        padding: 6
     },
     containerError: {
         width: '100%',
@@ -58,34 +55,28 @@ const styles = StyleSheet.create({
         alignItems: 'flex-start',
         backgroundColor: colors.green3,
         paddingBottom: 10,
-        borderWidth: 2,
-        borderColor: 'red',
-        height: 70,
+        height: 74,
         padding: 5
     },
 
     input: {
-        width: 240,
+        width: '65%',
         height: 35,
-        padding: 8,
+        paddingHorizontal: 8,
         fontSize: 14,
         backgroundColor: colors.white,
         color: colors.black,
         borderRadius: 18,
-        borderWidth: 2,
-        borderColor: 'red',
         position: 'relative',
     },
     inputError: {
-        width: 240,
+        width: '65%',
         height: 35,
-        padding: 8,
+        paddingHorizontal: 8,
         fontSize: 14,
         backgroundColor: colors.white,
         color: 'red',
         borderRadius: 18,
-        borderWidth: 2,
-        borderColor: 'red',
         position: 'relative',
         textDecorationLine: 'underline'
     },
@@ -95,11 +86,10 @@ const styles = StyleSheet.create({
         color: 'red',
         backgroundColor: colors.white,
         borderRadius: 4,
-        borderWidth: 2,
-        borderColor: 'yellow',
         position: 'absolute',
-        bottom: 5,
+        bottom: 6,
         left: 10,
-        paddingHorizontal: 8,
+        paddingVertical: 1,
+        paddingHorizontal: 6,
     }
 })

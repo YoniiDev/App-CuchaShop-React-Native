@@ -4,13 +4,11 @@ import { colors } from '../constants/colors';
 import Card from './Card';
 
 const CategoryItem = ({ category, navigation }) => {
-    
     return (
         <Card style={styles.additionalStyleCard}>
             <Pressable style={styles.pressable} onPress={() => navigation.navigate('ItemListCategory', {category})}>
                 <View style={styles.imageContainer}>
-                    <Image style={styles.imageCategory} resizeMode='cover' source={{ uri: category.image }} />
-                   
+                    <Image style={styles.imageCategory} resizeMode='cover' source={{ uri: category.image }} />  
                 </View>
                 <Text style={styles.textCategory}>{category.category}</Text>
             </Pressable>

@@ -13,8 +13,7 @@ const Home = ({ navigation }) => {
                 showsVerticalScrollIndicator={false}
                 keyExtractor={category => category.category}
                 data={categories}
-                renderItem={({ item }) => 
-                (
+                renderItem={({ item }) =>  (
                     <CategoryItem
                         navigation={navigation}
                         category={item}
