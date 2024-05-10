@@ -7,6 +7,7 @@ const Home = ({ navigation }) => {
     
     return (
         <View style={styles.flatListContainer}>
+            
             <FlatList
                 style={styles.flatList}
                 alignItems='center'

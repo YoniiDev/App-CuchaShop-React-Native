@@ -1,18 +1,45 @@
-import { ScrollView, Image, Button, StyleSheet, Text, View } from 'react-native'
+import { Alert, Pressable, ScrollView, Image, StyleSheet, Text, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import allProducts from '../data/products.json'
 import { colors } from '../constants/colors'
+import Counter from '../components/Counter'
+import { useDispatch, useSelector } from 'react-redux'
+import { reset } from '../features/Counter/counterSlice'
 
 const ItemDetail = ({ route, navigation }) => {
 
     const { productId: idSelected } = route.params
-
     const [product, setProduct] = useState(null)
+    const count = useSelector(state => state.counter.value)
+    const [addButtonDisabled, setAddButtonDisabled] = useState(false);
+    const [addButtonStyles, setAddButtonStyles] = useState(styles.addButtonActivated)
+    const dispatch = useDispatch()
+
+    const overStockAlert = () =>
+        Alert.alert(
+            'Alerta',
+            'No puedes añadir una cantidad que supere el stock disponible.',
+            [
+                { text: 'OK' },
+            ]);
 
     useEffect(() => {
         const productSelected = allProducts.find((product) => product.id === idSelected)
         setProduct(productSelected)
-    }, [idSelected])
+
+
+        if (product !== null && count > product.stock) {
+            overStockAlert()
+            dispatch(reset())
+            setAddButtonDisabled(true)
+            setAddButtonStyles(styles.addButtonDisabled)
+
+        } else {
+            setAddButtonDisabled(false)
+            setAddButtonStyles(styles.addButtonActivated)
+        }
+    }, [idSelected, count])
+
 
     return (
         <ScrollView style={styles.main}>
@@ -34,14 +61,23 @@ const ItemDetail = ({ route, navigation }) => {
                                 <Text style={styles.textOfferPrice}>${product.offerPrice}</Text>
                                 <Text style={styles.textDiscountPercentage}>{product.discountPercentage * 100}% OFF</Text>
                             </View>
-                            <Text style={styles.textNormalPrice}>${product.normalPrice}</Text>
+                            <View style={styles.normalPriceAndStockContainer}>
+                                <Text style={styles.textNormalPrice}>${product.normalPrice}</Text>
+                                <Text style={styles.textStock}>{product.stock} {product.stock === 1 || product.stock === 0 ? 'Disponible' : 'Disponibles'}</Text>
+                            </View>
                         </View>
                     </View>
 
 
+                    <Counter stock={product.stock} />
+
                     <View style={styles.buttonConatiner}>
-                        <Button title='Añadir'></Button>
-                        <Button onPress={() => navigation.goBack()} title="Volver" />
+                        <Pressable disabled={addButtonDisabled}>
+                            <Text style={addButtonStyles}>AÑADIR</Text>
+                        </Pressable>
+                        <Pressable onPress={() => navigation.goBack()}>
+                            <Text style={styles.goBackButton}>VOLVER</Text>
+                        </Pressable>
                     </View>
 
                     <View style={styles.descriptionContainer}>
@@ -63,15 +99,22 @@ const ItemDetail = ({ route, navigation }) => {
                                 />
 
                             </View>
-                            <View style={styles.texContainer}>
-                                <Text style={styles.textBrand}>{product.brand}</Text>
+                            <Text style={styles.textBrand2}>{product.brand}</Text>
+                            <View style={styles.texContainer2}>
                                 <Text style={styles.textNormalPrice2}>${product.normalPrice}</Text>
+                                <Text style={styles.textStock}>{product.stock} {product.stock === 1 || product.stock === 0 ? 'Disponible' : 'Disponibles'}</Text>
                             </View>
                         </View>
 
+                        <Counter stock={product.stock} />
+
                         <View style={styles.buttonConatiner}>
-                            <Button title='Añadir'></Button>
-                            <Button onPress={() => navigation.goBack()} title="Volver" />
+                            <Pressable disabled={addButtonDisabled}>
+                                <Text style={addButtonStyles}>AÑADIR</Text>
+                            </Pressable>
+                            <Pressable onPress={() => navigation.goBack()}>
+                                <Text style={styles.goBackButton}>VOLVER</Text>
+                            </Pressable>
                         </View>
 
                         <View style={styles.descriptionContainer}>
@@ -120,9 +163,19 @@ const styles = StyleSheet.create({
     },
     texContainer: {
         width: '100%',
-        backgroundColor: colors.white,
+    },
+    texContainer2: {
+        width: '100%',
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between',
     },
     textBrand: {
+        fontFamily: 'OpenSans_SemiCondensed-Bold',
+        fontSize: 18,
+    },
+    textBrand2: {
+        width: '100%',
         fontFamily: 'OpenSans_SemiCondensed-Bold',
         fontSize: 18,
     },
@@ -141,14 +194,24 @@ const styles = StyleSheet.create({
         fontSize: 18,
         color: colors.green3,
     },
+    normalPriceAndStockContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-between'
+
+    },
     textNormalPrice: {
         fontFamily: 'OpenSans_SemiCondensed-Regular',
         fontSize: 18,
         color: colors.gray2,
-        textDecorationLine: 'line-through'
+        textDecorationLine: 'line-through',
     },
     textNormalPrice2: {
         fontFamily: 'OpenSans_SemiCondensed-Bold',
+        fontSize: 18,
+    },
+    textStock: {
+        fontFamily: 'OpenSans_SemiCondensed-Regular',
         fontSize: 18,
     },
     buttonConatiner: {
@@ -156,7 +219,33 @@ const styles = StyleSheet.create({
         padding: 10,
         backgroundColor: colors.white,
     },
-
+    addButtonActivated: {
+        backgroundColor: colors.green1,
+        color: colors.white,
+        fontSize: 14,
+        fontWeight: '500',
+        textAlign: 'center',
+        paddingVertical: 9,
+        borderRadius: 2,
+    },
+    addButtonDisabled: {
+        backgroundColor: colors.gray,
+        fontSize: 14,
+        fontWeight: '500',
+        textAlign: 'center',
+        paddingVertical: 9,
+        borderRadius: 2,
+        color: 'black'
+    },
+    goBackButton: {
+        backgroundColor: colors.green1,
+        color: colors.white,
+        fontSize: 14,
+        fontWeight: '500',
+        textAlign: 'center',
+        paddingVertical: 9,
+        borderRadius: 2,
+    },
     descriptionContainer: {
         backgroundColor: colors.white,
         padding: 10
