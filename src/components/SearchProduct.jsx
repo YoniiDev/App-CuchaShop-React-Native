@@ -4,12 +4,21 @@ import { FontAwesome5 } from "@expo/vector-icons"
 import { AntDesign } from "@expo/vector-icons"
 import { colors } from '../constants/colors'
 import { Ionicons } from '@expo/vector-icons';
+import { useDispatch } from 'react-redux'
+import { setCategorySelected } from '../features/Shop/shopSlice'
 
-const SearchProduct = ({ onSearch = () => { }, error = "", goBack = () => { } }) => {
+const SearchProduct = ({ onSearch = () => { }, error = "", navigation }) => {
+
     const [keyword, setKeyword] = useState("")
     const hasError = error !== "";
     const containerStyle = hasError ? styles.containerError : styles.container;
     const inputStyle = hasError ? styles.inputError : styles.input;
+    const dispatch = useDispatch()
+
+    const handleGoBack = () => {
+        dispatch(setCategorySelected(''))
+        navigation.goBack()
+    }
 
     return (
         <View style={containerStyle}>
@@ -28,7 +37,7 @@ const SearchProduct = ({ onSearch = () => { }, error = "", goBack = () => { } })
             <Pressable onPress={() => setKeyword("")}>
                 <FontAwesome5 name="eraser" size={28} color="white" />
             </Pressable>
-            <Pressable onPress={goBack}>
+            <Pressable onPress={handleGoBack}>
                 <AntDesign name="back" size={28} color="white" />
             </Pressable>
         </View>

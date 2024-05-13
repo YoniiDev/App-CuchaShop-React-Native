@@ -4,6 +4,7 @@ import { useFonts } from "expo-font"
 import Navigator from './src/navigation/Navigator';
 import { Provider } from 'react-redux';
 import store from './src/store';
+import AppLayout from './src/components/darkModeLayout/AppLayout';
 
 const App = () => {
     const [fontsLoaded, fontError] = useFonts({
@@ -32,7 +33,9 @@ const App = () => {
         return (
             <SafeAreaView style={styles.container} >
                 <Provider store={store}>
-                    <Navigator />
+                    <AppLayout>
+                        <Navigator />
+                    </AppLayout>
                 </Provider>
             </SafeAreaView>
         )

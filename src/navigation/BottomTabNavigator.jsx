@@ -10,10 +10,23 @@ import { FontAwesome5 } from "@expo/vector-icons"
 import { Ionicons } from '@expo/vector-icons'
 import CartTemp from '../screens/CartTemp'
 import OrdersTemp from '../screens/OrdersTemp'
+import { useDispatch } from 'react-redux'
+import { setIdSelected, setCategorySelected } from '../features/Shop/shopSlice'
+import { useNavigation } from '@react-navigation/native'
 
 const Tab = createBottomTabNavigator()
 
 const BottomTabNavigator = () => {
+
+    const dispatch = useDispatch()
+    const navigation = useNavigation()
+
+    const handleNavigateShop = () => {
+        dispatch(setIdSelected(''))
+        dispatch(setCategorySelected(''))
+        navigation.navigate('Shop')
+    }
+
     return (
         <Tab.Navigator
             screenOptions={({ route }) => ({
@@ -42,7 +55,8 @@ const BottomTabNavigator = () => {
                                 />
                             </View>
                         )
-                    }
+                    },
+                    onPress: ()=> handleNavigateShop()
                 }}
             />
             <Tab.Screen

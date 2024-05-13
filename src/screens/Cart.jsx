@@ -3,8 +3,16 @@ import React from 'react'
 import CartData from '../data/cart.json'
 import CartItem from '../components/CartItem.jsx'
 import { colors } from '../constants/colors.js'
+import CartLayout from '../components/darkModeLayout/CartLayout.jsx'
+import { useSelector } from 'react-redux'
 
 const Cart = () => {
+
+
+    const isDark = useSelector(state => state.global.value.darkMode)
+    const textColor = isDark ? colors.dark6 : colors.black
+    const borderColor = isDark ? colors.green1 : colors.green2
+    const backgroundColorConfirmAndTotalContainer = isDark ? colors.dark1 : colors.white
 
     const total = CartData.reduce((acumulador, currentItem) => {
         const price = currentItem.offerPrice > 0 ? currentItem.offerPrice : currentItem.normalPrice
@@ -13,7 +21,7 @@ const Cart = () => {
     }, 0)
 
     return (
-        <View style={styles.container}>
+        <CartLayout>
             <FlatList
                 style={styles.flatList}
                 data={CartData}
@@ -26,23 +34,19 @@ const Cart = () => {
                     )
                 }}
             />
-            <View style={styles.confirmAndTotalContainer}>
+            <View style={{ ...styles.confirmAndTotalContainer, backgroundColor: backgroundColorConfirmAndTotalContainer, borderColor: borderColor }}>
                 <Pressable style={styles.pressableConfirm}>
                     <Text style={styles.textConfirm}>Confirmar</Text>
                 </Pressable>
-                <Text style={styles.textTotal}>Total: ${total}</Text>
+                <Text style={{ ...styles.textTotal, color: textColor }}>Total: ${total}</Text>
             </View>
-        </View>
+        </CartLayout >
     )
 }
 
 export default Cart
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        paddingBottom: 10
-    },
     flatList: {
         padding: 10,
     },
@@ -51,9 +55,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-around',
         alignItems: 'center',
         paddingVertical: 10,
-        backgroundColor: colors.white,
         borderWidth: 2,
-        borderColor: colors.green3,
         borderRadius: 10,
         marginHorizontal: 10
     },
@@ -72,6 +74,5 @@ const styles = StyleSheet.create({
     textTotal: {
         fontFamily: 'OpenSans_SemiCondensed-Bold',
         fontSize: 16,
-        color: 'black'
     },
 })

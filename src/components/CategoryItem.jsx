@@ -1,7 +1,7 @@
 import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { colors } from '../constants/colors';
-import Card from './Card';
+import CardLayout from './darkModeLayout/CardLayout'
 import { useDispatch } from 'react-redux';
 import { setCategorySelected } from '../features/Shop/shopSlice';
 
@@ -15,14 +15,14 @@ const CategoryItem = ({ category, navigation }) => {
     }
 
     return (
-        <Card style={styles.additionalStyleCard}>
+        <CardLayout style={styles.additionalStyleCard}>
             <Pressable style={styles.pressable} onPress={handleNavigate}>
                 <View style={styles.imageContainer}>
                     <Image style={styles.imageCategory} resizeMode='cover' source={{ uri: category.image }} />
                 </View>
                 <Text style={styles.textCategory}>{category.category}</Text>
             </Pressable>
-        </Card>
+        </CardLayout>
     )
 }
 

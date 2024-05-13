@@ -5,6 +5,8 @@ import { colors } from '../constants/colors'
 import Counter from '../components/Counter'
 import { useDispatch, useSelector } from 'react-redux'
 import { reset } from '../features/Counter/counterSlice'
+import ItemDetailLayout from '../components/darkModeLayout/ItemDetailLayout'
+import { setIdSelected } from '../features/Shop/shopSlice'
 
 const ItemDetail = ({ route, navigation }) => {
 
@@ -14,6 +16,11 @@ const ItemDetail = ({ route, navigation }) => {
     const [addButtonDisabled, setAddButtonDisabled] = useState(false);
     const [addButtonStyles, setAddButtonStyles] = useState(styles.addButtonActivated)
     const dispatch = useDispatch()
+
+    const isDark = useSelector(state => state.global.value.darkMode)
+    const textColor = isDark ? colors.dark6 : colors.black
+    const texColorDiscountPercentage = isDark ? colors.green1 : colors.green2
+    const texColorNormalPrice = isDark ? colors.dark5 : colors.gray2
 
     const overStockAlert = () =>
         Alert.alert(
@@ -40,57 +47,18 @@ const ItemDetail = ({ route, navigation }) => {
         }
     }, [idSelected, count])
 
+    const handleGoBack = () => {
+        dispatch(setIdSelected(''))
+        navigation.goBack()
+    }
 
     return (
         <ScrollView style={styles.main}>
-            {product && product.offerPrice > 0 ? (
-                <View style={styles.mainContainer}>
-                    <View style={styles.cardContainer}>
-                        <Text style={styles.textTitle}>{product.title}</Text>
-                        <View style={styles.imageContainer}>
-                            <Image
-                                source={{ uri: product.images[0] }}
-                                style={styles.image}
-                                resizeMode='contain'
-                            />
-
-                        </View>
-                        <View style={styles.texContainer}>
-                            <Text style={styles.textBrand}>{product.brand}</Text>
-                            <View style={styles.offerPriceAndDiscountPercentageContainer}>
-                                <Text style={styles.textOfferPrice}>${product.offerPrice}</Text>
-                                <Text style={styles.textDiscountPercentage}>{product.discountPercentage * 100}% OFF</Text>
-                            </View>
-                            <View style={styles.normalPriceAndStockContainer}>
-                                <Text style={styles.textNormalPrice}>${product.normalPrice}</Text>
-                                <Text style={styles.textStock}>{product.stock} {product.stock === 1 || product.stock === 0 ? 'Disponible' : 'Disponibles'}</Text>
-                            </View>
-                        </View>
-                    </View>
-
-
-                    <Counter stock={product.stock} />
-
-                    <View style={styles.buttonConatiner}>
-                        <Pressable disabled={addButtonDisabled}>
-                            <Text style={addButtonStyles}>AÑADIR</Text>
-                        </Pressable>
-                        <Pressable onPress={() => navigation.goBack()}>
-                            <Text style={styles.goBackButton}>VOLVER</Text>
-                        </Pressable>
-                    </View>
-
-                    <View style={styles.descriptionContainer}>
-                        <Text style={styles.titleDescription}>Descripción:</Text>
-                        <Text style={styles.textDescription}>{product.description}</Text>
-                    </View>
-                </View>
-            )
-                :
-                product && product.offerPrice === 0 ? (
+            <ItemDetailLayout>
+                {product && product.offerPrice > 0 ? (
                     <View style={styles.mainContainer}>
                         <View style={styles.cardContainer}>
-                            <Text style={styles.textTitle}>{product.title}</Text>
+                            <Text style={{ ...styles.textTitle, color: textColor }}>{product.title}</Text>
                             <View style={styles.imageContainer}>
                                 <Image
                                     source={{ uri: product.images[0] }}
@@ -99,31 +67,76 @@ const ItemDetail = ({ route, navigation }) => {
                                 />
 
                             </View>
-                            <Text style={styles.textBrand2}>{product.brand}</Text>
-                            <View style={styles.texContainer2}>
-                                <Text style={styles.textNormalPrice2}>${product.normalPrice}</Text>
-                                <Text style={styles.textStock}>{product.stock} {product.stock === 1 || product.stock === 0 ? 'Disponible' : 'Disponibles'}</Text>
+                            <View style={styles.texContainer}>
+                                <Text style={{ ...styles.textBrand, color: textColor }}>{product.brand}</Text>
+                                <View style={styles.offerPriceAndDiscountPercentageContainer}>
+                                    <Text style={{ ...styles.textOfferPrice, color: textColor }}>${product.offerPrice}</Text>
+                                    <Text style={{ ...styles.textDiscountPercentage, color: texColorDiscountPercentage }}>{product.discountPercentage * 100}% OFF</Text>
+                                </View>
+                                <View style={styles.normalPriceAndStockContainer}>
+                                    <Text style={{ ...styles.textNormalPrice, color: texColorNormalPrice }}>${product.normalPrice}</Text>
+                                    <Text style={{ ...styles.textStock, color: textColor }}>{product.stock} {product.stock === 1 || product.stock === 0 ? 'Disponible' : 'Disponibles'}</Text>
+                                </View>
                             </View>
                         </View>
 
+
                         <Counter stock={product.stock} />
 
-                        <View style={styles.buttonConatiner}>
+                        <View style={styles.buttonContainer}>
                             <Pressable disabled={addButtonDisabled}>
                                 <Text style={addButtonStyles}>AÑADIR</Text>
                             </Pressable>
-                            <Pressable onPress={() => navigation.goBack()}>
+                            <Pressable onPress={handleGoBack}>
                                 <Text style={styles.goBackButton}>VOLVER</Text>
                             </Pressable>
                         </View>
 
                         <View style={styles.descriptionContainer}>
-                            <Text style={styles.titleDescription}>Descripción:</Text>
-                            <Text style={styles.textDescription}>{product.description}</Text>
+                            <Text style={{ ...styles.titleDescription, color: textColor }}>Descripción:</Text>
+                            <Text style={{ ...styles.textDescription, color: textColor }}>{product.description}</Text>
                         </View>
                     </View>
+                )
+                    :
+                    product && product.offerPrice === 0 ? (
+                        <View style={styles.mainContainer}>
+                            <View style={styles.cardContainer}>
+                                <Text style={{ ...styles.textTitle, color: textColor }}>{product.title}</Text>
+                                <View style={styles.imageContainer}>
+                                    <Image
+                                        source={{ uri: product.images[0] }}
+                                        style={styles.image}
+                                        resizeMode='contain'
+                                    />
 
-                ) : null}
+                                </View>
+                                <Text style={{ ...styles.textBrand2, color: textColor }}>{product.brand}</Text>
+                                <View style={styles.texContainer2}>
+                                    <Text style={{ ...styles.textNormalPrice2, color: textColor }}>${product.normalPrice}</Text>
+                                    <Text style={{ ...styles.textStock, color: textColor }}>{product.stock} {product.stock === 1 || product.stock === 0 ? 'Disponible' : 'Disponibles'}</Text>
+                                </View>
+                            </View>
+
+                            <Counter stock={product.stock} />
+
+                            <View style={styles.buttonContainer}>
+                                <Pressable disabled={addButtonDisabled}>
+                                    <Text style={addButtonStyles}>AÑADIR</Text>
+                                </Pressable>
+                                <Pressable onPress={handleGoBack}>
+                                    <Text style={styles.goBackButton}>VOLVER</Text>
+                                </Pressable>
+                            </View>
+
+                            <View style={styles.descriptionContainer}>
+                                <Text style={{ ...styles.titleDescription, color: textColor }}>Descripción:</Text>
+                                <Text style={{ ...styles.textDescription, color: textColor }}>{product.description}</Text>
+                            </View>
+                        </View>
+
+                    ) : null}
+            </ItemDetailLayout>
         </ScrollView >
     )
 }
@@ -142,10 +155,10 @@ const styles = StyleSheet.create({
     },
     cardContainer: {
         alignItems: 'center',
-        backgroundColor: colors.white,
-        padding: 10,
-        gap: 5,
-        width: '100%'
+        paddingHorizontal: 20,
+        paddingVertical: 10,
+        gap: 15,
+        width: '100%',
     },
     textTitle: {
         fontFamily: 'OpenSans_SemiCondensed-Bold',
@@ -156,10 +169,12 @@ const styles = StyleSheet.create({
         height: 300,
         width: 300,
         backgroundColor: colors.white,
+        borderRadius: 10
     },
     image: {
         width: '100%',
         height: '100%',
+        borderRadius: 10
     },
     texContainer: {
         width: '100%',
@@ -214,10 +229,10 @@ const styles = StyleSheet.create({
         fontFamily: 'OpenSans_SemiCondensed-Regular',
         fontSize: 18,
     },
-    buttonConatiner: {
-        gap: 10,
-        padding: 10,
-        backgroundColor: colors.white,
+    buttonContainer: {
+        gap: 20,
+        paddingHorizontal: 20,
+        paddingVertical: 10
     },
     addButtonActivated: {
         backgroundColor: colors.green1,
@@ -247,8 +262,8 @@ const styles = StyleSheet.create({
         borderRadius: 2,
     },
     descriptionContainer: {
-        backgroundColor: colors.white,
-        padding: 10
+        paddingHorizontal: 20,
+        paddingVertical: 10
     },
     titleDescription: {
         fontFamily: 'OpenSans_SemiCondensed-Bold',

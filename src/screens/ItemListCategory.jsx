@@ -4,17 +4,17 @@ import React, { useEffect, useState } from 'react'
 import products from '../data/products.json'
 import ProductItem from '../components/ProductItem'
 import SearchProduct from '../components/SearchProduct'
+import ItemListCategoryLayout from '../components/darkModeLayout/ItemListCategoryLayout'
 
 const ItemListCategory = ({ setCategorySelected = () => { }, navigation, route }) => {
 
     const [keyWord, setKeyword] = useState("")
     const [productsFiltered, setProductsFiltered] = useState([])
     const [error, setError] = useState("")
-
     const { category: categorySelected } = route.params
 
     useEffect(() => {
-        
+
         const regexDigits = /\d/
         const hasDigits = regexDigits.test(keyWord)
 
@@ -33,41 +33,41 @@ const ItemListCategory = ({ setCategorySelected = () => { }, navigation, route }
 
         //PRODUCTOS FILTRADOS POR CATEGORIAS
         const productsPrefiltered = products.filter((product) => product.category === categorySelected.category)
-        
+
         //PODUCTOS FILTRADOS POR NOMBRES
         const productsFilter = productsPrefiltered.filter((product) => product.title.toLocaleLowerCase().includes(keyWord.toLocaleLowerCase()))
         setProductsFiltered(productsFilter)
         setError("")
-        
+
     }, [keyWord, categorySelected.category])
 
     return (
-        <View style={styles.flatListAndSearchContainer}>
-            <SearchProduct error={error} onSearch={setKeyword} goBack={() => navigation.goBack()} />
+        <ItemListCategoryLayout>
+            <SearchProduct error={error} onSearch={setKeyword} navigation={navigation} />
 
             <FlatList
                 style={styles.flatList}
+                contentContainerStyle={styles.contentContainer}
                 data={productsFiltered}
                 renderItem={({ item }) => <ProductItem product={item} navigation={navigation} />}
                 keyExtractor={(producto) => producto.id}
                 numColumns={2}
-                alignItems='center'
             />
+        </ItemListCategoryLayout>
 
-        </View>
     )
 }
 
 export default ItemListCategory
 
 const styles = StyleSheet.create({
-    flatListAndSearchContainer: {
-        flex: 1,
-        width: '100%',
-        alignItems: 'center',
-    },
+
     flatList: {
-        width: '100%',
-        paddingVertical: 10
+        width:'100%'
+
+    },
+    contentContainer: {
+        paddingVertical: 10,
+        alignItems: 'center',
     }
 })

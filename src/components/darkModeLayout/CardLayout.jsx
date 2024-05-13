@@ -1,20 +1,22 @@
 import { StyleSheet, View } from 'react-native'
 import React from 'react'
-import { colors } from '../constants/colors'
+import { colors } from '../../constants/colors'
+import { useSelector } from 'react-redux'
 
-const Card = ({ children, style }) => {
+const CardLayout = ({ children, style }) => {
+    const isDark = useSelector(state => state.global.value.darkMode)
+   const backgroundColor = isDark ? colors.dark1 : colors.white
     return (
-        <View style={{ ...styles.container, ...style }}>
+        <View style={{ ...styles.container, ...style, backgroundColor: backgroundColor }}>
             {children}
         </View>
     )
 }
 
-export default Card
+export default CardLayout
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: colors.white,
         width: 170,
         height: 260,
         shadowColor: "#000000",
