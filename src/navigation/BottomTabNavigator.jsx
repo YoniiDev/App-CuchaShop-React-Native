@@ -21,12 +21,6 @@ const BottomTabNavigator = () => {
     const dispatch = useDispatch()
     const navigation = useNavigation()
 
-    const handleNavigateShop = () => {
-        dispatch(setIdSelected(''))
-        dispatch(setCategorySelected(''))
-        navigation.navigate('Shop')
-    }
-
     return (
         <Tab.Navigator
             screenOptions={({ route }) => ({
@@ -56,7 +50,6 @@ const BottomTabNavigator = () => {
                             </View>
                         )
                     },
-                    onPress: ()=> handleNavigateShop()
                 }}
             />
             <Tab.Screen

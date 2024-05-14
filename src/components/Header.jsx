@@ -4,21 +4,25 @@ import { colors } from '../constants/colors'
 import { FontAwesome } from '@expo/vector-icons';
 import products from '../data/products.json'
 import SwitchCustom from './SwitchCustom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { setDarkMode } from '../features/Global/globalSlice';
 
 const Header = ({ title }) => {
 
     const [product, setProduct] = useState({})
     const dispatch = useDispatch()
-    const [isEnabled, setIsEnabled] = useState(false)
+
+    const darkMode = useSelector(state => state.global.value.darkMode)
+    const [isEnabled, setIsEnabled] = useState(darkMode)
 
     const handleTheme = () => {
-        setIsEnabled(initialValue => !initialValue)
-        dispatch(setDarkMode(!isEnabled))
+        dispatch(setDarkMode(!darkMode))
     }
 
-    console.log('isEnable:', isEnabled);
+    useEffect(() => {
+        setIsEnabled(darkMode)
+    }, [darkMode])
+
     useEffect(() => {
         if (title > 0) {
             const productFound = products.find((product) => product.id === title)
@@ -43,7 +47,7 @@ const Header = ({ title }) => {
                         </View>
                         <SwitchCustom
                             isEnabled={isEnabled}
-                            setIsEnabled={handleTheme}
+                            handleTheme={handleTheme}
                         />
                     </View>
 
@@ -52,7 +56,7 @@ const Header = ({ title }) => {
                             <Text style={styles.screensTitleText}>{product.category}</Text>
                             <SwitchCustom
                                 isEnabled={isEnabled}
-                                setIsEnabled={handleTheme}
+                                handleTheme={handleTheme}
                             />
                         </View>
 
@@ -62,7 +66,7 @@ const Header = ({ title }) => {
                             <Text style={styles.screensTitleText}>{title}</Text>
                             <SwitchCustom
                                 isEnabled={isEnabled}
-                                setIsEnabled={handleTheme}
+                                handleTheme={handleTheme}
                             />
                         </View>
             }

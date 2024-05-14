@@ -2,8 +2,12 @@ import { FlatList } from 'react-native'
 import CategoryItem from '../components/CategoryItem'
 import categories from '../data/categories.json'
 import ShopLayout from '../components/darkModeLayout/ShopLayout'
+import React, { useEffect, useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { setCategorySelected, setIdSelected } from '../features/Shop/shopSlice'
 
 const Home = ({ navigation }) => {
+    const dispatch = useDispatch()
 
     return (
         <ShopLayout>

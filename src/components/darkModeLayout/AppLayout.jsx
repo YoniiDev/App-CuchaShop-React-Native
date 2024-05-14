@@ -4,14 +4,15 @@ import { colors } from '../../constants/colors'
 import { useSelector } from 'react-redux'
 
 const AppLayout = ({ children }) => {
+
     const itemIdSelected = useSelector(state => state.shop.value.itemIdSelected)
     const isItemIdSelected = itemIdSelected ? true : false
     const isDark = useSelector(state => state.global.value.darkMode)
     const backgroundColorMain = isDark ? colors.dark2 : colors.white
     const backgroundColorSecond = isDark ? colors.dark1 : colors.white
-    const backgroundColor = isItemIdSelected ?  backgroundColorSecond : backgroundColorMain
+    const backgroundColor = isItemIdSelected ? backgroundColorSecond : backgroundColorMain //craer un estado global de screen con params.name y usarlo como condicional
     return (
-        <View style={{ ...styles.container, backgroundColor: backgroundColor}}>
+        <View style={{ ...styles.container, backgroundColor: backgroundColor }}>
             {children}
         </View>
     )
