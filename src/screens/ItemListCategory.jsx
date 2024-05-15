@@ -5,6 +5,8 @@ import products from '../data/products.json'
 import ProductItem from '../components/ProductItem'
 import SearchProduct from '../components/SearchProduct'
 import ItemListCategoryLayout from '../components/darkModeLayout/ItemListCategoryLayout'
+import { useDispatch } from 'react-redux'
+import { setIdSelected } from '../features/Shop/shopSlice'
 
 const ItemListCategory = ({ setCategorySelected = () => { }, navigation, route }) => {
 
@@ -12,6 +14,15 @@ const ItemListCategory = ({ setCategorySelected = () => { }, navigation, route }
     const [productsFiltered, setProductsFiltered] = useState([])
     const [error, setError] = useState("")
     const { category: categorySelected } = route.params
+    const dispatch = useDispatch()
+
+    useEffect(() => {
+        const isItemListCategoryFocused = navigation.addListener('focus', () => {
+            dispatch(setIdSelected(''))
+        })
+
+        return isItemListCategoryFocused
+    }, [])
 
     useEffect(() => {
 

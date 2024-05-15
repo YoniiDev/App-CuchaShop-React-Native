@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View } from 'react-native'
+import { StyleSheet, TouchableOpacity, View } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import HomeStackNavigator from './HomeStackNavigator'
 import { colors } from '../constants/colors'
@@ -19,7 +19,6 @@ const Tab = createBottomTabNavigator()
 const BottomTabNavigator = () => {
 
     const dispatch = useDispatch()
-    const navigation = useNavigation()
 
     return (
         <Tab.Navigator
@@ -50,6 +49,16 @@ const BottomTabNavigator = () => {
                             </View>
                         )
                     },
+                    tabBarButton: (props) => (
+                        < TouchableOpacity
+                            {...props}
+                            onPress={() => {
+                                dispatch(setCategorySelected(''));
+                                dispatch(setIdSelected(''));
+                                props.onPress();
+                            }}
+                        />
+                    )
                 }}
             />
             <Tab.Screen

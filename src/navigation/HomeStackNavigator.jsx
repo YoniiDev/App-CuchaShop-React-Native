@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Home from '../screens/Home'
 import Header from '../components/Header'
 import ItemListCategory from '../screens/ItemListCategory'
@@ -7,6 +7,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 const Stack = createNativeStackNavigator()
 const HomeStackNavigator = () => {
+
     return (
         <Stack.Navigator
             initialRouteName='Home'

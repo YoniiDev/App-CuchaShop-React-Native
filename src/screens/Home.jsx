@@ -9,6 +9,14 @@ import { setCategorySelected, setIdSelected } from '../features/Shop/shopSlice'
 const Home = ({ navigation }) => {
     const dispatch = useDispatch()
 
+    useEffect(() => {
+        const isHomeFocused = navigation.addListener('focus', () => {
+            dispatch(setCategorySelected(''))
+            dispatch(setIdSelected(''))
+        })
+
+        return isHomeFocused
+    }, [])
     return (
         <ShopLayout>
             <FlatList
