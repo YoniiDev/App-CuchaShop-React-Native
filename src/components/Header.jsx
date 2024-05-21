@@ -1,42 +1,36 @@
 import { Image, StyleSheet, Text, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { colors } from '../constants/colors'
-import { FontAwesome } from '@expo/vector-icons';
-import products from '../data/products.json'
 import SwitchCustom from './SwitchCustom';
 import { useDispatch, useSelector } from 'react-redux';
 import { setDarkMode } from '../features/Global/globalSlice';
 
 const Header = ({ title }) => {
 
-    const [product, setProduct] = useState({})
     const dispatch = useDispatch()
 
+    //DarkMode
+    //Constante que almacena el estado global de DarkMode.
     const darkMode = useSelector(state => state.global.value.darkMode)
+    //Constante para manejar el estado de DarkMode
     const [isEnabled, setIsEnabled] = useState(darkMode)
 
+    //Funcion para cambiar el estado global de darkMode a true o false.
     const handleTheme = () => {
         dispatch(setDarkMode(!darkMode))
     }
 
     useEffect(() => {
+        //Setea la constante isEnable con el nuevo valor de darkMode cada vez que cambia su estado global.
         setIsEnabled(darkMode)
     }, [darkMode])
 
-    useEffect(() => {
-        if (title > 0) {
-            const productFound = products.find((product) => product.id === title)
-            setProduct(productFound)
-        }
-    }, [title])
 
     return (
         <>
-            {/* Home Header */}
             {
                 title === 'CuchaShop' ?
                     <View style={styles.headerContainer}>
-
                         <View style={styles.brandAndLogoContainer}>
                             <Text style={styles.textTitle}>{title}</Text>
                             <Image
@@ -50,25 +44,14 @@ const Header = ({ title }) => {
                             handleTheme={handleTheme}
                         />
                     </View>
-
-                    : title > 0 ?
-                        <View style={styles.screenHeaderContainer}>
-                            <Text style={styles.screensTitleText}>{product.category}</Text>
-                            <SwitchCustom
-                                isEnabled={isEnabled}
-                                handleTheme={handleTheme}
-                            />
-                        </View>
-
-                        :
-                        // Screens Header
-                        <View style={styles.screenHeaderContainer}>
-                            <Text style={styles.screensTitleText}>{title}</Text>
-                            <SwitchCustom
-                                isEnabled={isEnabled}
-                                handleTheme={handleTheme}
-                            />
-                        </View>
+                    :
+                    <View style={styles.screenHeaderContainer}>
+                        <Text style={styles.screensTitleText}>{title}</Text>
+                        <SwitchCustom
+                            isEnabled={isEnabled}
+                            handleTheme={handleTheme}
+                        />
+                    </View>
             }
         </>
 
@@ -78,7 +61,7 @@ const Header = ({ title }) => {
 export default Header
 
 const styles = StyleSheet.create({
-    // Home Header
+    
     headerContainer: {
         width: '100%',
         height: 44,
@@ -102,7 +85,6 @@ const styles = StyleSheet.create({
         width: 35,
     },
 
-    // Screen Header
     screenHeaderContainer: {
         width: '100%',
         height: 44,

@@ -5,22 +5,24 @@ import CardLayout from './darkModeLayout/CardLayout'
 import { useDispatch } from 'react-redux';
 import { setCategorySelected } from '../features/Shop/shopSlice';
 
-const CategoryItem = ({ category, navigation }) => {
+const CategoryItem = ({ categories, navigation }) => {
 
     const dispatch = useDispatch()
-    
+
     const handleNavigate = () => {
-        dispatch(setCategorySelected(category.category))
-        navigation.navigate('ItemListCategory', { category })
+        //Setea el estado global de categorySelected con la categoria seleccionada.
+        dispatch(setCategorySelected(categories.category))
+        //Direcciona al usuario a la pantalla ItemListCategory.
+        navigation.navigate('ItemListCategory', { category: categories.category })
     }
 
     return (
         <CardLayout style={styles.additionalStyleCard}>
             <Pressable style={styles.pressable} onPress={handleNavigate}>
                 <View style={styles.imageContainer}>
-                    <Image style={styles.imageCategory} resizeMode='cover' source={{ uri: category.image }} />
+                    <Image style={styles.imageCategory} resizeMode='cover' source={{ uri: categories.image }} />
                 </View>
-                <Text style={styles.textCategory}>{category.category}</Text>
+                <Text style={styles.textCategory}>{categories.category}</Text>
             </Pressable>
         </CardLayout>
     )

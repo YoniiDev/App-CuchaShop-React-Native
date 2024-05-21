@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import HomeStackNavigator from './HomeStackNavigator'
 import { colors } from '../constants/colors'
@@ -8,27 +8,30 @@ import OrderStack from './OrderStackNavigator'
 import Header from '../components/Header'
 import { FontAwesome5 } from "@expo/vector-icons"
 import { Ionicons } from '@expo/vector-icons'
-import CartTemp from '../screens/CartTemp'
-import OrdersTemp from '../screens/OrdersTemp'
-import { useDispatch } from 'react-redux'
-import { setIdSelected, setCategorySelected } from '../features/Shop/shopSlice'
-import { useNavigation } from '@react-navigation/native'
+import { useSelector } from 'react-redux'
+
 
 const Tab = createBottomTabNavigator()
-
 const BottomTabNavigator = () => {
 
-    const dispatch = useDispatch()
+    //Constante que almacena el estado global de categorySelected.
+    const categorySelected = useSelector(state => state.shop.value.categorySelected)
 
     return (
         <Tab.Navigator
             screenOptions={({ route }) => ({
-                headerShown: route.name === 'Shop' ? false : true,
+
                 header: () => {
                     return <Header title={
-                        route.name === 'Cart' ? 'Carrito de Compras' :
-                            route.name === 'Orders' ? 'Ordenes de Compra' :
-                                ""} />
+                        categorySelected === 'Alimento Perro Adulto' ? 'Alimento Perro Adulto' :
+                            categorySelected === 'Alimento Cachorro' ? 'Alimento Cachorro' :
+                                categorySelected === 'Alimento Gato Adulto' ? 'Alimento Gato Adulto' :
+                                    categorySelected === 'Alimento Gatito' ? 'Alimento Gatito' :
+                                        route.name === 'Shop' ? 'CuchaShop' :
+                                            route.name === 'Cart' ? 'Carrito de Compras' :
+                                                route.name === 'Orders' ? 'Ordenes de Compra' :
+                                                    ""
+                    } />
                 },
                 tabBarShowLabel: false,
                 tabBarStyle: styles.tabBar,
@@ -49,16 +52,6 @@ const BottomTabNavigator = () => {
                             </View>
                         )
                     },
-                    tabBarButton: (props) => (
-                        < TouchableOpacity
-                            {...props}
-                            onPress={() => {
-                                dispatch(setCategorySelected(''));
-                                dispatch(setIdSelected(''));
-                                props.onPress();
-                            }}
-                        />
-                    )
                 }}
             />
             <Tab.Screen
@@ -95,7 +88,7 @@ const BottomTabNavigator = () => {
                     }
                 }}
             />
-        </Tab.Navigator>
+        </Tab.Navigator >
     )
 }
 

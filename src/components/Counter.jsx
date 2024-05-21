@@ -5,14 +5,22 @@ import { useDispatch, useSelector } from 'react-redux'
 import { decrement, increment, incrementByAmount, reset } from '../features/Counter/counterSlice'
 
 
-const Counter = (stock) => {
+const Counter = ({ stock }) => {
+
+    //Constante que almacena el valor global del contador.
     const count = useSelector(state => state.counter.value)
     const dispatch = useDispatch()
-    const [inputToAdd, setInputToAdd] = useState(null)
+    //Constante que almacena la cantidad ingresada manualmente por el usuario.
+    const [inputToAdd, setInputToAdd] = useState('')
+    //Constante que maneja el estado de la propiedad disable del boton Add
     const [disableButtonAdd, setDisableButtonAdd] = useState(false)
-    const [spanInputStyle, setSpanInputStyle] = useState(styles.spanInput)
+    //Constante que maneja el estilo del boton Add.
     const [addButtonStyle, setAddButtonStyle] = useState(styles.buttonText)
+    //Constante que maneja el estilo del TextInput.
+    const [spanInputStyle, setSpanInputStyle] = useState(styles.spanInput)
 
+    //Alerta
+    //Una alerta que se muestra al usuario cuando ingresa un tipo de dato no valido.
     const invalidDataAlert = () =>
         Alert.alert(
             'Alerta',
@@ -21,6 +29,8 @@ const Counter = (stock) => {
                 { text: 'OK' },
             ]);
 
+    //handleIncrement
+    //Es una función que ejecuta la acción de incrementar y envia la información del stock disponible para que el contador no lo supere.
     const handleIncrement = () => {
         dispatch(increment(stock))
     }
@@ -28,18 +38,28 @@ const Counter = (stock) => {
     useEffect(() => {
 
         if (inputToAdd !== null && inputToAdd !== '') {
+            //regexNumbers
+            //Es una expresion regular que evalua si el input ingresado por el usuario tiene numeros o no.
             const regexNumbers = /^\d+$/;
             const hasNumbers = regexNumbers.test(inputToAdd);
 
-            if (!hasNumbers || inputToAdd > stock.stock || inputToAdd === '0') {
+            if (!hasNumbers || inputToAdd > stock || inputToAdd === '0') {
+                //Alerta que avisa al usuario que ingrese un número mayor a cero y que no supere el stock disponible. 
                 invalidDataAlert()
-                setInputToAdd(null)
+                //Setea la constante inputToAdd en string vacio.
+                setInputToAdd('')
+                //Desactiva el boton Add.
                 setDisableButtonAdd(true)
+                //Aplica el estilo buttonTextDisable al boton Add.
                 setAddButtonStyle(styles.buttonTextDisable)
+                //Aplica el estilo spanInputError al TextInput.
                 setSpanInputStyle(styles.spanInputError)
             } else {
+                //Si todo va bien el boton add se mantiene activado
                 setDisableButtonAdd(false)
+                //se mantiene el estilo buttonText en el boton Add
                 setAddButtonStyle(styles.buttonText)
+                //y tambien se mantiene el estilo en el TextInput.
                 setSpanInputStyle(styles.spanInput)
             }
         } else {
@@ -49,6 +69,13 @@ const Counter = (stock) => {
         }
 
     }, [inputToAdd])
+
+    const handleIncrementByAmount = () => {
+        //Añade al contador la cantidad ingresada por el usuario en el TextInput.
+        dispatch(incrementByAmount(Number(inputToAdd)))
+        //Restablece el TextInput en string vacio.
+        setInputToAdd('')
+    }
 
     return (
         <View style={styles.container}>
@@ -72,7 +99,7 @@ const Counter = (stock) => {
                     onChangeText={setInputToAdd}
                     value={inputToAdd}
                 />
-                <Pressable style={styles.buttonPressable} disabled={disableButtonAdd} onPress={() => dispatch(incrementByAmount(Number(inputToAdd)))}>
+                <Pressable style={styles.buttonPressable} disabled={disableButtonAdd} onPress={handleIncrementByAmount}>
                     <Text style={addButtonStyle}>Add</Text>
                 </Pressable>
             </View>

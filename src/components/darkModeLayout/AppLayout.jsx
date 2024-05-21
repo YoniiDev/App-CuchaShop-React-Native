@@ -7,7 +7,6 @@ const AppLayout = ({ children }) => {
 
     const itemIdSelected = useSelector(state => state.shop.value.itemIdSelected)
     const isItemIdSelected = itemIdSelected ? true : false
-    console.log('isItemIdSelected:', isItemIdSelected);
     const isDark = useSelector(state => state.global.value.darkMode)
     const backgroundColorMain = isDark ? colors.dark2 : colors.white
     const backgroundColorSecond = isDark ? colors.dark1 : colors.white
