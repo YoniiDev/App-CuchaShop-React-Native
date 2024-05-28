@@ -5,24 +5,9 @@ import Navigator from './src/navigation/Navigator';
 import { Provider, useSelector } from 'react-redux';
 import store from './src/store';
 import AppLayout from './src/components/darkModeLayout/AppLayout';
-import Toast, { BaseToast } from 'react-native-toast-message';
+
 
 const App = () => {
-
-    const toastConfig = {
-        success: (props) => (
-            <BaseToast
-                {...props}
-                style={{
-                    backgroundColor: 'white',
-                    borderLeftColor: colors.green1,
-                }}
-                contentContainerStyle={{
-                    paddingHorizontal: 15,
-                }}
-            />
-        )
-    }
 
     const [fontsLoaded, fontError] = useFonts({
 
@@ -52,7 +37,6 @@ const App = () => {
                 <Provider store={store}>
                     <AppLayout>
                         <Navigator />
-                        <Toast config={toastConfig} />
                     </AppLayout>
                 </Provider>
             </SafeAreaView>
