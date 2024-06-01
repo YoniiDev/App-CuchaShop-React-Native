@@ -33,15 +33,16 @@ const LoginScreen = ({ navigation }) => {
     }
 
     useEffect(() => {
-        //Si el logeo es exitoso, se setea el estado global de email e idToken.
+        //Si el logeo es exitoso en firebase, se setea el estado global de email, idToken y de localID.
         if (result.isSuccess) {
             dispatch(setUser({
                 email: result.data.email,
                 idToken: result.data.idToken,
+                localId: result.data.localId
             })
             )
         } if (result.isError) {
-            //Si el logeo no es exitoso, se almacena el mensaje del error en errorMessage y se muestra al ususario un mensaje distinto segun 
+            //Si el logeo no es exitoso en firebase, se almacena el mensaje del error proveniente desde firebase en errorMessage y se muestra al ususario un mensaje distinto segun 
             //el tipo de error.
             const errorMessage = result.error?.data?.error?.message;
             switch (errorMessage) {

@@ -9,7 +9,7 @@ import Header from '../components/Header'
 import { FontAwesome5 } from "@expo/vector-icons"
 import { Ionicons } from '@expo/vector-icons'
 import { useSelector } from 'react-redux'
-
+import MyProfileStackNavigator from './MyProfileStackNavigator'
 
 const Tab = createBottomTabNavigator()
 const BottomTabNavigator = () => {
@@ -83,6 +83,19 @@ const BottomTabNavigator = () => {
                                     size={24}
                                     color={focused ? colors.green1 : "white"}
                                 />
+                            </View>
+                        )
+                    }
+                }}
+            />
+            <Tab.Screen
+                name='My profile'
+                component={MyProfileStackNavigator}
+                options={{
+                    tabBarIcon: ({ focused }) => {
+                        return (
+                            <View>
+                                <Ionicons name="person-circle" size={30} color={ focused ? colors.green1 : "white"}  />
                             </View>
                         )
                     }

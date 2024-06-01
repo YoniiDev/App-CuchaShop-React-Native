@@ -68,11 +68,12 @@ const SignupScreen = ({ navigation }) => {
     }
 
     useEffect(() => {
-        //Si el registro de usuario es exitoso en FireBase se setea el estado global de user(con el email) e idToken.
+        //Si el registro de usuario es exitoso en FireBase se setea el estado global de user(con el email), el estado global de idToken y localId.
         if (result.isSuccess) {
             dispatch(setUser({
                 email: result.data.email,
-                idToken: result.data.idToken
+                idToken: result.data.idToken,
+                localId: result.data.localId
             })
             )
 

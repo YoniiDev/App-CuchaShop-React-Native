@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import BottomTabNavigator from './BottomTabNavigator'
 import AuthStackNavigator from './AuthStackNavigator'
 import { useSelector } from 'react-redux'
-import Toast, { BaseToast, ErrorToast } from 'react-native-toast-message';
+import Toast, { BaseToast, ErrorToast, InfoToast } from 'react-native-toast-message';
 import { colors } from '../constants/colors'
 
 const Navigator = () => {
@@ -42,6 +42,22 @@ const Navigator = () => {
                 text2NumberOfLines={null}
             />
         ),
+        //Configuración de la tostada de tipo info
+        info: (props) => (
+            <InfoToast
+                {...props}
+                style={{
+                    backgroundColor: 'white',
+                    borderLeftColor: 'blue',
+                    height: 'auto'
+                }}
+                contentContainerStyle={{
+                    paddingHorizontal: 10,
+                    paddingVertical: 10
+                }}
+                text2NumberOfLines={null}
+            />
+        )
     }
 
     //Constante que almacena el valor global de user.
