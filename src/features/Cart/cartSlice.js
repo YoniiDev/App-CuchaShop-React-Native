@@ -62,9 +62,13 @@ export const cartSlice = createSlice({
         },
         removeCartItem: (state, { payload }) => {
             //Logica para remover productos del carrito.
+        },
+        clearCart: (state) => {
+            state.value.total = null
+            state.value.items = []
         }
     }
 })
 
-export const { addCartItem, removeCartItem } = cartSlice.actions
+export const { addCartItem, removeCartItem, clearCart } = cartSlice.actions
 export default cartSlice.reducer

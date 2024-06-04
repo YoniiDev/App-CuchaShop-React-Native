@@ -22,6 +22,7 @@ const BottomTabNavigator = () => {
             screenOptions={({ route }) => ({
 
                 header: () => {
+
                     return <Header title={
                         categorySelected === 'Alimento Perro Adulto' ? 'Alimento Perro Adulto' :
                             categorySelected === 'Alimento Cachorro' ? 'Alimento Cachorro' :
@@ -30,7 +31,8 @@ const BottomTabNavigator = () => {
                                         route.name === 'Shop' ? 'CuchaShop' :
                                             route.name === 'Cart' ? 'Carrito de Compras' :
                                                 route.name === 'Orders' ? 'Ordenes de Compra' :
-                                                    ""
+                                                    route.name === "My profile" ? 'Mi Perfil' :
+                                                        ""
                     } />
                 },
                 tabBarShowLabel: false,
@@ -95,7 +97,7 @@ const BottomTabNavigator = () => {
                     tabBarIcon: ({ focused }) => {
                         return (
                             <View>
-                                <Ionicons name="person-circle" size={30} color={ focused ? colors.green1 : "white"}  />
+                                <Ionicons name="person-circle" size={30} color={focused ? colors.green1 : "white"} />
                             </View>
                         )
                     }

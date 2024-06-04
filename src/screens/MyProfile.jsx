@@ -7,6 +7,8 @@ import { clearUser } from '../features/User/userSlice'
 import { colors } from '../constants/colors'
 import MyProfileLayout from '../components/darkModeLayout/MyProfileLayout'
 import Toast from 'react-native-toast-message'
+import { clearCart } from '../features/Cart/cartSlice'
+import { setDarkMode } from '../features/Global/globalSlice'
 
 const MyProfile = ({ navigation }) => {
 
@@ -54,6 +56,12 @@ const MyProfile = ({ navigation }) => {
     const signOut = async () => {
         //Se setea a null el estado globla de user y token en Redux.
         dispatch(clearUser())
+        //Se restablece el array de items del carrito de compra y el total en el estado global de Redux a sus valor inicial, esto para evitar
+        //que cuando inicie sesion otro usuario o se registre un nuevo usario, aparescan los productos y el total del usuario anterior.
+        dispatch(clearCart())
+        //Y se restablece el valor de darkMode a false, para que cuando ingrese otro usuario o se registre un nuevo usuario, no cargue la app
+        //con el estado de darkMode activado.
+        dispatch(setDarkMode(false))
     }
 
     return (

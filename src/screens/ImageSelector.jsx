@@ -20,6 +20,8 @@ const ImageSelector = ({ navigation }) => {
 
     //Constante que almacena la foto tomada por el usuario, en formato base64.
     const [image, setImage] = useState(null)
+    //Constante que permite saber si la constante imagen es null o no.
+    const isImageNull = image === null ? true : false
     //Constante que sirve para saber si la foto o imagen de perfil proviene desde de la cámara o la galería.
     const [isImageFromCamera, setIsImageFromCamera] = useState(false)
     //Constante que almacena la URI de la fotografía tomada con la camara del dispositivo.
@@ -169,7 +171,8 @@ const ImageSelector = ({ navigation }) => {
                 })
 
                 if (!result.canceled) {
-                    //Si el usuario confirmó el recorte de la imagen, esta se alamacenará en formato base64 en una constante image.
+                    //Si el usuario confirmó el recorte de la imagen proveniente desde la galeria de fotos, esta se almacenará 
+                    //en formato base64 en una constante image.
                     const image = `data:image/jpeg;base64,${result.assets[0].base64}`
                     //y luego seteará el estado image, declarado al principio del componente.
                     setImage(image)
@@ -240,14 +243,16 @@ const ImageSelector = ({ navigation }) => {
     //Esta función se ejecuta cuando se presiona el boton confirmar foto.
     const confirmImage = async () => {
         try {
-            //Setea el estado global de imageCamera en Redux, con la foto de perfil del usuario en formato base64.
+            //Setea el estado global de imageCamera en Redux, con la foto de perfil seleccionada por el usuario en formato base64.
             dispatch(setCameraImage(image))
-            //Se trigerea la acción de almacenar la foto de perfil del usuario en formato base64, en RTDataBases.
+            //y se trigerea la acción de almacenar la foto de perfil del usuario en formato base64, en RTDataBases.
             triggerPostImage({ image, localId })
             if (isImageFromCamera) {
-                //Este result contiene información de la fotografía.
+                //Este result contiene información de la fotografía y esta linea de código almacena la fotografía tomada desde la camara en la
+                //galeria de fotos del dispositivo.
                 const result = await ExpoLibrary.createAssetAsync(imageURI)
             }
+
         } catch (error) {
             Toast.show({
                 type: 'error',
@@ -338,7 +343,9 @@ const ImageSelector = ({ navigation }) => {
                         <Image source={{ uri: image || imageFromBase?.image }} style={styles.image} />
                         <AddButton title='Tomar otra foto' onPress={pickImage} />
                         <AddButton title='Galería de fotos' onPress={pickLibraryImage} />
-                        <AddButton title='Confirmar foto' onPress={confirmImage} />
+                        {/* Rederizado condicional del boton <<Cofirmar Foto>> para evitar que el usuario setee en null el estado global de 
+                        imageCamera en Redux y tambien para prevenir que cargue null en profileImage de RTDataBase*/}
+                        {!isImageNull ? <AddButton title='Confirmar foto' onPress={confirmImage} /> : null}
                         <AddButton title='Cancelar' onPress={handleCancel} />
                     </>
                 ) : (
@@ -347,6 +354,7 @@ const ImageSelector = ({ navigation }) => {
                             <Text style={{ ...styles.textNoPhoto, color: textColor }}>No hay foto para mostrar...</Text>
                         </View>
                         <AddButton title='Tomar una foto' onPress={pickImage} />
+                        <AddButton title='Galería de fotos' onPress={pickLibraryImage} />
                         <AddButton title='Cancelar' onPress={handleCancel} />
                     </>
                 )}
