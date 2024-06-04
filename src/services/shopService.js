@@ -39,10 +39,12 @@ export const shopApi = createApi({
                 body: order
             })
         }),
+        //Obtiene la imagen de perfil.
         getProfileImage: builder.query({
             query: (localId) => `profileImages/${localId}.json`,
             providesTags: ['profileImageGet']
         }),
+        //Guarda la imagen de perfil, en formato base64 en RTDataBase.
         postProfileImage: builder.mutation({
             query: ({ image, localId }) => ({
                 url: `profileImages/${localId}.json`,
