@@ -17,7 +17,8 @@ const MyProfile = ({ navigation }) => {
     //Obtiene la imagen de perfil del usuario, en formato base64 desde RTDataBase y la almacena en una constante llamada imageFromBase.
     const { data: imageFromBase, isError } = useGetProfileImageQuery(localId)
     //Esta constante almacena la imagen de perfil por defecto, cuando el usario aun no ha agregado una foto.
-    const defaultImageRoute = '../../assets/images/defaultProfile.png'
+    const defaultImageRoute = "../../assets/images/defaultProfile.png"
+
     const dispatch = useDispatch()
 
     //useEffect para el manejo de error de useGetProfileImageQuery(localId)
@@ -45,16 +46,23 @@ const MyProfile = ({ navigation }) => {
     }, [isError]);
 
     //launchCamera
-    //Esta función se ejecuta cuando se presiona en el bóton añadir foto de perfil.
+    //Esta función se ejecuta cuando se presiona en el bóton añadir foto de perfil o cambiar foto de perfil.
     const launchCamera = async () => {
-        //Dirige al usuario hacia la pestaña ImageSelector.
+        //Dirige al usuario hacia la screen Image selector.
         navigation.navigate('Image selector')
+    }
+
+    //launchLocation
+    //Esta función se ejecuta cuando el usuario presiona el boton Mi dirección.
+    const launchLocation = async () => {
+        //Dirige al usuario hacia la screen List Address.
+        navigation.navigate('List Address')
     }
 
     //signOut
     //Esta función se ejecuta cuando el usuario presiona el boton cerrar sesión.
     const signOut = async () => {
-        //Se setea a null el estado globla de user y token en Redux.
+        //Se setea a null el estado globla de user y de token en Redux.
         dispatch(clearUser())
         //Se restablece el array de items del carrito de compra y el total en el estado global de Redux a sus valor inicial, esto para evitar
         //que cuando inicie sesion otro usuario o se registre un nuevo usario, aparescan los productos y el total del usuario anterior.
@@ -80,7 +88,10 @@ const MyProfile = ({ navigation }) => {
                         resizeMode='cover'
                     />
                 )}
-                <AddButton onPress={launchCamera} title={imageFromBase || imageCamera ? 'Cambiar foto de perfil' : 'Añadir foto de perfil'} />
+                <AddButton onPress={launchCamera} title={imageFromBase || imageCamera
+                    ? 'Cambiar foto de perfil'
+                    : 'Añadir foto de perfil'} />
+                <AddButton onPress={launchLocation} title="Mi dirección" />
                 <AddButton onPress={signOut} title='Cerrar Sesión' />
             </View>
         </MyProfileLayout>

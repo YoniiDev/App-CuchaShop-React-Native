@@ -6,7 +6,7 @@ export const shopApi = createApi({
     reducerPath: "shopApi",
     baseQuery: fetchBaseQuery({ baseUrl: baseURL }),
     //tagTypes: Declara los tags.
-    tagTypes: ['profileImageGet'],
+    tagTypes: ['profileImageGet', 'locationGet'],
     endpoints: (builder) => ({
         //Obtiene todas las categorias
         getCategories: builder.query({
@@ -39,7 +39,7 @@ export const shopApi = createApi({
                 body: order
             })
         }),
-        //Obtiene la imagen de perfil.
+        //Obtiene la imagen de perfil del usuario.
         getProfileImage: builder.query({
             query: (localId) => `profileImages/${localId}.json`,
             providesTags: ['profileImageGet']
@@ -54,6 +54,36 @@ export const shopApi = createApi({
                 }
             }),
             invalidatesTags: ['profileImageGet']
+        }),
+        //Obtiene la información de la ubicación del usuario desde RTDataBase.
+        getLocation: builder.query({
+            query: (localId) => `locations/${localId}.json`,
+            providesTags: ['locationGet']
+        }),
+        //Guarda la información de la ubicación del usuario en RTDataBase.
+        postLocation: builder.mutation({
+            query: ({ location, localId }) => ({
+                //location es la colección donde se guardará la información de la dirección del usuario.
+                url: `locations/${localId}.json`,
+                //se utiliza el metodo PUT para evitar generar una nueva id, ya que se esta indicando el id del usuario.
+                method: "PUT",
+                //La información del body se almacenará en la colección locations de RTDataBase, con la id del usuario.
+                body: {
+                    latitude: location.latitude,
+                    longitude: location.longitude,
+                    address: location.address,
+                    updatedAt: location.updatedAt
+                },
+            }),
+            invalidatesTags: ['locationGet']
+        }),
+        //Elimina la ubicaión del usuario en RTDataBase
+        deleteLocation: builder.mutation({
+            query: (localId) => ({
+                url: `locations/${localId}.json`,
+                method: "DELETE",
+            }),
+            invalidatesTags: ['locationGet']
         })
     })
 })
@@ -64,5 +94,8 @@ export const {
     useGetProductsByCategoryQuery,
     usePostOrderMutation,
     useGetProfileImageQuery,
-    usePostProfileImageMutation
+    usePostProfileImageMutation,
+    useGetLocationQuery,
+    usePostLocationMutation,
+    useDeleteLocationMutation
 } = shopApi

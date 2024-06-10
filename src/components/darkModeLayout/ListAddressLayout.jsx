@@ -3,7 +3,7 @@ import React from 'react'
 import { colors } from '../../constants/colors'
 import { useSelector } from 'react-redux'
 
-const ShopLayout = ({ children }) => {
+const ListAddressLayout = ({ children }) => {
     const isDark = useSelector(state => state.global.value.darkMode)
     const backgroundColor = isDark ? colors.dark2 : colors.white
     return (
@@ -13,11 +13,11 @@ const ShopLayout = ({ children }) => {
     )
 }
 
-export default ShopLayout
+export default ListAddressLayout
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        width: '100%'
+        width: '100%',
     },
 })
