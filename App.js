@@ -2,10 +2,34 @@ import { Platform, SafeAreaView, StatusBar, StyleSheet } from 'react-native';
 import { colors } from './src/constants/colors';
 import { useFonts } from "expo-font"
 import Navigator from './src/navigation/Navigator';
-import { Provider, useSelector } from 'react-redux';
+import { Provider } from 'react-redux';
 import store from './src/store';
+import { initSQLiteDB } from "./src/persistence"
 import AppLayout from './src/components/darkModeLayout/AppLayout';
 
+//Se incializa la base de datos SQLite
+(async () => {
+    try {
+        const response = await initSQLiteDB()
+    } catch (error) {
+        Toast.show({
+            type: 'error',
+            text1: 'Error en la Base de datos',
+            text2: 'Ha ocurrido un error en la aplicación al intentar inicializar la Base de Datos local.',
+            autoHide: true,
+            visibilityTime: 6000,
+            topOffset: 50,
+            text1Style: {
+                fontSize: 16,
+                fontWeight: 'bold',
+            },
+            text2Style: {
+                fontSize: 14,
+                color: 'black'
+            },
+        });
+    }
+})()
 
 const App = () => {
 

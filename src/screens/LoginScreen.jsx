@@ -6,6 +6,7 @@ import SubmitButton from '../components/SubmitButton'
 import { useSignInMutation } from '../services/authService'
 import { setUser } from "../features/User/userSlice"
 import { useDispatch } from 'react-redux'
+import { insertSession } from '../persistence'
 import { Feather } from '@expo/vector-icons';
 import Toast from 'react-native-toast-message';
 
@@ -33,25 +34,32 @@ const LoginScreen = ({ navigation }) => {
     }
 
     useEffect(() => {
-        //Si el logeo es exitoso en firebase, se setea el estado global de email, idToken y de localID.
-        if (result.isSuccess) {
-            dispatch(setUser({
-                email: result.data.email,
-                idToken: result.data.idToken,
-                localId: result.data.localId
-            })
-            )
-        } if (result.isError) {
-            //Si el logeo no es exitoso en firebase, se almacena el mensaje del error proveniente desde firebase en errorMessage y se muestra al ususario un mensaje distinto segun 
-            //el tipo de error.
-            const errorMessage = result.error?.data?.error?.message;
-            switch (errorMessage) {
-                //Toast que se muestra al usuario cuando ingresa un formato de email invalido.
-                case "INVALID_EMAIL":
+        (async () => {
+            if (result?.data && result.isSuccess) {
+                try {
+                    //Si el logeo en firebase es exitoso, se guarda el email, el localId y el token del usuario en la tabla session de SQLite.
+                    //En este punto, primero se inserta los datos de la sesión en la tabla de sqlite, ya que al hacerlo despues del dispatch, 
+                    //se desmontará el componente 'LoginScreen', antes de guardar la informacion de la session en la tabla de sqlite. 
+                    //Esto porque habrá un user en el estado global de redux luego de ejecutarse el dispacth, provacando que se muestre la
+                    // screen de Home de la app y pudiendo no esperar a que se guarde la información de la sesion en la tabla de sqlite antes 
+                    //de desmontar el componente 'LoginScreen'.
+                    const response = await insertSession({
+                        email: result.data.email,
+                        localId: result.data.localId,
+                        token: result.data.idToken
+                    })
+                    //luego se setean los datos de la sesión en el estado global del email, el idToken y del localID de Redux.
+                    dispatch(setUser({
+                        email: result.data.email,
+                        idToken: result.data.idToken,
+                        localId: result.data.localId
+                    })
+                    )
+                } catch (error) {
                     Toast.show({
                         type: 'error',
-                        text1: 'Formato de Email Incorrecto',
-                        text2: 'Por favor, ingrese un email válido.',
+                        text1: 'Error al iniciar session',
+                        text2: 'Ha ocurrido un error al intentar almacenar los datos de la sessión del usuario, en la base de dato local.',
                         autoHide: true,
                         visibilityTime: 6000,
                         topOffset: 50,
@@ -65,107 +73,134 @@ const LoginScreen = ({ navigation }) => {
                         },
 
                     });
-                    break;
-                //Toast que se muestra al usuario cuando ingresa un mail o una contraseña invalida para acceder.
-                case "INVALID_LOGIN_CREDENTIALS":
-                    Toast.show({
-                        type: 'error',
-                        text1: 'Credenciales Incorrectas',
-                        text2: 'El email o la contraseña no son correctos. Inténtelo nuevamente.',
-                        autoHide: true,
-                        visibilityTime: 6000,
-                        topOffset: 50,
-                        text1Style: {
-                            fontSize: 16,
-                            fontWeight: 'bold',
-                        },
-                        text2Style: {
-                            fontSize: 14,
-                            color: 'black'
-                        },
-                    });
-                    break;
-                //Toast que se muestra al usuario cuando ha intentado iniciar sesion con la contraseña incorrecta varias veces.
-                case "TOO_MANY_ATTEMPTS_TRY_LATER : Access to this account has been temporarily disabled due to many failed login attempts. You can immediately restore it by resetting your password or you can try again later.":
-                    Toast.show({
-                        type: 'error',
-                        text1: 'Haz realizado demasidos intentos',
-                        text2: 'El acceso a esta cuenta se ha deshabilitado temporalmente debido a muchos intentos fallidos de inicio de sesión. Puede restaurarlo inmediatamente restableciendo su contraseña o puede volver a intentarlo más tarde".',
-                        autoHide: true,
-                        visibilityTime: 10000,
-                        topOffset: 50,
-                        text1Style: {
-                            fontSize: 16,
-                            fontWeight: 'bold',
-                        },
-                        text2Style: {
-                            fontSize: 14,
-                            color: 'black',
-                            textAlign: 'justify'
-                        },
-                    });
-                    break;
-                //Toast que se muestra al usuario cuando no ingresa nada o solo ingresa la contraseña para acceder.
-                case "MISSING_EMAIL":
-                    Toast.show({
-                        type: 'error',
-                        text1: 'Falta el correo electrónico',
-                        text2: 'El correo electrónico es obligatorio. Por favor, ingrese su correo electrónico.',
-                        autoHide: true,
-                        visibilityTime: 6000,
-                        topOffset: 50,
-                        text1Style: {
-                            fontSize: 16,
-                            fontWeight: 'bold',
-                        },
-                        text2Style: {
-                            fontSize: 14,
-                            color: 'black',
-                            textAlign: 'justify'
-                        },
-                    });
-                    break;
-                //Toast que se muestra al usuario cuando ingresa un correo sin una contraseña para acceder.
-                case 'MISSING_PASSWORD':
-                    Toast.show({
-                        type: 'error',
-                        text1: 'Falta la contraseña',
-                        text2: 'La contraseña es obligatoria. Por favor, ingrese su contraseña.',
-                        autoHide: true,
-                        visibilityTime: 6000,
-                        topOffset: 50,
-                        text1Style: {
-                            fontSize: 16,
-                            fontWeight: 'bold',
-                        },
-                        text2Style: {
-                            fontSize: 14,
-                            color: 'black',
-                            textAlign: 'justify'
-                        },
-                    });
-                    break;
-                default:
-                    //Toast que se muestra al usuario en caso de que el mensaje de error sea distinto a los especificados anteriormente.
-                    Toast.show({
-                        type: 'error',
-                        text1: 'Error Inesperado',
-                        text2: 'Ha ocurrido un error inesperado. Por favor, intente más tarde.',
-                        autoHide: true,
-                        visibilityTime: 6000,
-                        topOffset: 50,
-                        text1Style: {
-                            fontSize: 16,
-                            fontWeight: 'bold',
-                        },
-                        text2Style: {
-                            fontSize: 14,
-                            color: 'black'
-                        },
-                    });
-                    break;
+                }
+
+            } if (result.isError) {
+                //Si el logeo no es exitoso en firebase, se almacena el mensaje del error proveniente desde firebase en errorMessage y se muestra al ususario un mensaje distinto segun 
+                //el tipo de error.
+                const errorMessage = result.error?.data?.error?.message;
+                switch (errorMessage) {
+                    //Toast que se muestra al usuario cuando ingresa un formato de email invalido.
+                    case "INVALID_EMAIL":
+                        Toast.show({
+                            type: 'error',
+                            text1: 'Formato de Email Incorrecto',
+                            text2: 'Por favor, ingrese un email válido.',
+                            autoHide: true,
+                            visibilityTime: 6000,
+                            topOffset: 50,
+                            text1Style: {
+                                fontSize: 16,
+                                fontWeight: 'bold',
+                            },
+                            text2Style: {
+                                fontSize: 14,
+                                color: 'black'
+                            },
+
+                        });
+                        break;
+                    //Toast que se muestra al usuario cuando ingresa un mail o una contraseña invalida para acceder.
+                    case "INVALID_LOGIN_CREDENTIALS":
+                        Toast.show({
+                            type: 'error',
+                            text1: 'Credenciales Incorrectas',
+                            text2: 'El email o la contraseña no son correctos. Inténtelo nuevamente.',
+                            autoHide: true,
+                            visibilityTime: 6000,
+                            topOffset: 50,
+                            text1Style: {
+                                fontSize: 16,
+                                fontWeight: 'bold',
+                            },
+                            text2Style: {
+                                fontSize: 14,
+                                color: 'black'
+                            },
+                        });
+                        break;
+                    //Toast que se muestra al usuario cuando ha intentado iniciar sesion con la contraseña incorrecta varias veces.
+                    case "TOO_MANY_ATTEMPTS_TRY_LATER : Access to this account has been temporarily disabled due to many failed login attempts. You can immediately restore it by resetting your password or you can try again later.":
+                        Toast.show({
+                            type: 'error',
+                            text1: 'Haz realizado demasidos intentos',
+                            text2: 'El acceso a esta cuenta se ha deshabilitado temporalmente debido a muchos intentos fallidos de inicio de sesión. Puede restaurarlo inmediatamente restableciendo su contraseña o puede volver a intentarlo más tarde".',
+                            autoHide: true,
+                            visibilityTime: 10000,
+                            topOffset: 50,
+                            text1Style: {
+                                fontSize: 16,
+                                fontWeight: 'bold',
+                            },
+                            text2Style: {
+                                fontSize: 14,
+                                color: 'black',
+                                textAlign: 'justify'
+                            },
+                        });
+                        break;
+                    //Toast que se muestra al usuario cuando no ingresa nada o solo ingresa la contraseña para acceder.
+                    case "MISSING_EMAIL":
+                        Toast.show({
+                            type: 'error',
+                            text1: 'Falta el correo electrónico',
+                            text2: 'El correo electrónico es obligatorio. Por favor, ingrese su correo electrónico.',
+                            autoHide: true,
+                            visibilityTime: 6000,
+                            topOffset: 50,
+                            text1Style: {
+                                fontSize: 16,
+                                fontWeight: 'bold',
+                            },
+                            text2Style: {
+                                fontSize: 14,
+                                color: 'black',
+                                textAlign: 'justify'
+                            },
+                        });
+                        break;
+                    //Toast que se muestra al usuario cuando ingresa un correo sin una contraseña para acceder.
+                    case 'MISSING_PASSWORD':
+                        Toast.show({
+                            type: 'error',
+                            text1: 'Falta la contraseña',
+                            text2: 'La contraseña es obligatoria. Por favor, ingrese su contraseña.',
+                            autoHide: true,
+                            visibilityTime: 6000,
+                            topOffset: 50,
+                            text1Style: {
+                                fontSize: 16,
+                                fontWeight: 'bold',
+                            },
+                            text2Style: {
+                                fontSize: 14,
+                                color: 'black',
+                                textAlign: 'justify'
+                            },
+                        });
+                        break;
+                    default:
+                        //Toast que se muestra al usuario en caso de que el mensaje de error sea distinto a los especificados anteriormente.
+                        Toast.show({
+                            type: 'error',
+                            text1: 'Error inesperado en inicio de sesión',
+                            text2: 'Ha ocurrido un error inesperado al intentar iniciar sesión. Por favor, intente más tarde.',
+                            autoHide: true,
+                            visibilityTime: 6000,
+                            topOffset: 50,
+                            text1Style: {
+                                fontSize: 16,
+                                fontWeight: 'bold',
+                            },
+                            text2Style: {
+                                fontSize: 14,
+                                color: 'black'
+                            },
+                        });
+                        break;
+                }
             }
-        }
+        })()
     }, [result])
 
     return (
