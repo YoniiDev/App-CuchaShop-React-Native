@@ -22,6 +22,7 @@ CuchaShop es una aplicación móvil multiplataforma compatible con Android e IOS
 
 
 ## Screenshot.
+A continuación se muestran imágenes de las distintas pantallas de la aplicación.
 
 ### Screen Auth Stack
 
@@ -77,22 +78,22 @@ CuchaShop es una aplicación móvil multiplataforma compatible con Android e IOS
 
 ## Ejecución Con la App Expo Go
 
-1. Instalar la aplicacion Expo Go desde la PlayStore o AppStore.
+1. Instala la aplicación Expo Go desde la PlayStore o AppStore.
 
-2. Abrir la app Expo Go y Seleccionar Scan QR code.
+2. Abre la app Expo Go y selecciona "Scan QR code".
 
 ![Screen Expo Go](./assets/screenshot/Screenshot_1.jpg)
 
-3. Escanear el codigo QR que aparecera en la consola, despues de haber ejecutado el comando npx expo star.
+3. Escanea el código QR que aparecerá en la consola después de haber ejecutado el comando npx expo start.
 
 
 ## Ejecución Con Android Studio
 
-Debes tener configurado con aterioridad un dispositivo en el emulador Android Studio, para seguir estos pasos.
+Debes tener configurado previamente un dispositivo en el emulador de Android Studio para seguir estos pasos:
 
-1. Abrir el Android Studio y luego abrir cualquier emulación de un dispositivo Android.
+1. Abre Android Studio y luego inicia cualquier emulación de un dispositivo Android.
 
-2. Una vez abierta la emulacion de un dispositivo Android, ejecutar en la consola el comando .
+2. Una vez iniciada la emulación de un dispositivo Android, ejecuta en la consola el siguiente comando:
 
     ```sh
     expo start --android
