@@ -198,12 +198,12 @@ const styles = StyleSheet.create({
     sub: {
         fontSize: 14,
         fontFamily: 'OpenSans_SemiCondensed-Regular',
-        color: 'blue',
+        color: colors.white
     },
     subLink: {
         fontSize: 14,
         fontFamily: 'OpenSans_SemiCondensed-Regular',
-        color: colors.white
+        color: 'blue',
     },
     loaderContainer: {
         justifyContent: 'center',

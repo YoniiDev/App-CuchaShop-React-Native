@@ -1,7 +1,7 @@
 import * as ExpoSQLite from "expo-sqlite"
 
 //Se abre una base de datos llamada "sessions.db", esta bd se almacena en la memoria del celular. Esta BD no funciona en web, solo funciona 
-//en dispisitivos móviles.
+//en dispisitivos móviles (android y IOS).
 const db = ExpoSQLite.openDatabase("sessions.db")
 
 export const initSQLiteDB = () => {
@@ -23,8 +23,8 @@ export const initSQLiteDB = () => {
 }
 
 export const insertSession = ({
-    email,
     localId,
+    email,
     token
 }) => {
     const promise = new Promise((resolve, reject) => {

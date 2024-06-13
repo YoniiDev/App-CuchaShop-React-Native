@@ -269,12 +269,12 @@ const styles = StyleSheet.create({
     },
     sub: {
         fontSize: 14,
-        color: 'blue',
+        color: colors.white,
         fontFamily: 'OpenSans_SemiCondensed-Regular',
     },
     subLink: {
         fontSize: 14,
-        color: colors.white,
+        color: 'blue',
         fontFamily: 'OpenSans_SemiCondensed-Regular',
     },
     loaderContainer: {
