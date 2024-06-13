@@ -26,36 +26,36 @@ CuchaShop es una aplicación móvil multiplataforma compatible con Android e IOS
 ### Screen Auth Stack
 
 <div style="display: flex; justify-content: space-around;">
-    <img src="./assets/screenshot/Screenshot_2.jpg" alt="Screen AuthStack" height="300" />
-    <img src="./assets/screenshot/Screenshot_3.jpg" alt="Screen de AuthStack" height="300"/>
+    <img src="./assets/screenshot/Screenshot_2.jpg" alt="Screen AuthStack" height="500" />
+    <img src="./assets/screenshot/Screenshot_3.jpg" alt="Screen de AuthStack" height="500"/>
 </div>
 
 ### Screen Home Stack.
 
 <div style="display: flex; justify-content: space-around;">
-    <img src="./assets/screenshot/Screenshot_4.jpg" alt="Screen de HomeStack" height="300"/>
-    <img src="./assets/screenshot/Screenshot_5.jpg" alt="Screen de HomeStack" height="300"/>
-    <img src="./assets/screenshot/Screenshot_6.jpg" alt="Screen de HomeStack" height="300"/>
+    <img src="./assets/screenshot/Screenshot_4.jpg" alt="Screen de HomeStack" height="500"/>
+    <img src="./assets/screenshot/Screenshot_5.jpg" alt="Screen de HomeStack" height="500"/>
+    <img src="./assets/screenshot/Screenshot_6.jpg" alt="Screen de HomeStack" height="500"/>
 </div>
 
 ### Screen Cart Stack
 
 <div style="display: flex; justify-content: space-around;">
-    <img src="./assets/screenshot/Screenshot_7.jpg" alt="Screen CartStack" height="300"/>
-    <img src="./assets/screenshot/Screenshot_8.jpg" alt="Screen CartStack" height="300"/>
+    <img src="./assets/screenshot/Screenshot_7.jpg" alt="Screen CartStack" height="500"/>
+    <img src="./assets/screenshot/Screenshot_8.jpg" alt="Screen CartStack" height="500"/>
 </div>
 
 ### Screen Oder Stack
 
 <div style="display: flex; justify-content: space-around;">
-    <img src="./assets/screenshot/Screenshot_9.jpg" alt="Screen OrderStack" height="300"/>
+    <img src="./assets/screenshot/Screenshot_9.jpg" alt="Screen OrderStack" height="500"/>
 </div>
 
 ### Screen My Profile Stack
 
 <div style="display: flex; justify-content: space-around;">
-    <img src="./assets/screenshot/Screenshot_10.jpg" alt="Screen MyProfileStack" height="300"/>
-    <img src="./assets/screenshot/Screenshot_11.jpg" alt="Screen MyProfileStack" height="300"/>
+    <img src="./assets/screenshot/Screenshot_10.jpg" alt="Screen MyProfileStack" height="500"/>
+    <img src="./assets/screenshot/Screenshot_11.jpg" alt="Screen MyProfileStack" height="500"/>
 </div>
 
 
