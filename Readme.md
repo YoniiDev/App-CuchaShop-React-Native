@@ -81,8 +81,7 @@ A continuación se muestran imágenes de las distintas pantallas de la aplicaci�
 1. Instala la aplicación Expo Go desde la PlayStore o AppStore.
 
 2. Abre la app Expo Go y selecciona "Scan QR code".
-
-![Screen Expo Go](./assets/screenshot/Screenshot_1.jpg)
+<img src="./assets/screenshot/Screenshot_1.jpg" alt="Screen Expo Go" height="500"/>
 
 3. Escanea el código QR que aparecerá en la consola después de haber ejecutado el comando npx expo start.
 
